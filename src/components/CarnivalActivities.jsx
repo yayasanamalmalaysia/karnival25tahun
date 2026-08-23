@@ -1,13 +1,17 @@
 import { ACTIVITY_ICONS } from './Icons'
-import { CARNIVAL_ACTIVITIES } from '../data/event'
+import { ASSETS, CARNIVAL_ACTIVITIES } from '../data/event'
+import { Bunting, ConfettiField } from './FestiveDecor'
 
 export default function CarnivalActivities() {
   return (
     <section className="section carnival-section" id="aktiviti">
+      <Bunting className="carnival-bunting" />
+      <ConfettiField className="carnival-confetti" />
       <div className="shell">
-        <div className="section-heading">
-          <h2>Lebih Banyak Menanti Anda</h2>
-          <p>Karnival besar untuk komuniti, keluarga dan warga AMAL.</p>
+        <div className="section-heading carnival-heading">
+          <span className="section-kicker">Aktiviti Untuk Semua</span>
+          <h2>Meriahnya Karnival Jubli Perak</h2>
+          <p>Meriah, ceria dan berkeluarga—pelbagai pengalaman menanti seluruh komuniti.</p>
         </div>
         <div className="activity-rail" role="list" aria-label="Senarai aktiviti karnival">
           {CARNIVAL_ACTIVITIES.map(([icon, title, status], index) => {
@@ -21,7 +25,9 @@ export default function CarnivalActivities() {
             )
           })}
         </div>
+        <img className="carnival-landscape" loading="lazy" src={ASSETS.festivalLandscape} alt="Ilustrasi suasana karnival patuh syariah dengan booth, pentas, pameran dan aktiviti keluarga" />
       </div>
+      <div className="carnival-road" aria-hidden="true"><span /></div>
     </section>
   )
 }

@@ -34,7 +34,7 @@ Preview dibuka pada laluan `/karnival25tahun/`.
 4. Hos build di server/domain utama YAM pada subfolder `/karnival25tahun/` atau sambungkan deployment platform kepada repo yang sama.
 5. URL sasaran: `https://amalmalaysia.org.my/karnival25tahun/`.
 
-Tiada push, deployment atau perubahan DNS dibuat dalam peringkat draf ini.
+Setiap push ke branch `main` akan mencetuskan workflow GitHub Pages. Untuk domain rasmi, kandungan build dalam `dist/` perlu disalin ke folder hosting `/karnival25tahun/`.
 
 ## Preview GitHub Pages
 

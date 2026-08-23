@@ -73,6 +73,12 @@ export const Stage = (props) => (
 export const Community = (props) => (
   <Icon {...props}><path d="M8 12c-3-2-5-1-5 1 0 4 9 8 9 8s9-4 9-8c0-2-2-3-5-1l-4 3-4-3Z" {...stroke} /><path d="M8 8a4 4 0 0 1 8 0" {...stroke} /></Icon>
 )
+export const Exhibition = (props) => (
+  <Icon {...props}><rect x="4" y="5" width="16" height="12" rx="2" {...stroke} /><path d="m7 14 3-3 2 2 3-4 2 2M9 21h6M12 17v4" {...stroke} /></Icon>
+)
+export const Food = (props) => (
+  <Icon {...props}><path d="M5 4v7M8 4v7M5 8h3M6.5 11v9M16 4v16M16 4c3 2 3 7 0 9" {...stroke} /></Icon>
+)
 
 export const ACTIVITY_ICONS = {
   run: Run,
@@ -83,4 +89,6 @@ export const ACTIVITY_ICONS = {
   bag: Bag,
   stage: Stage,
   community: Community,
+  exhibition: Exhibition,
+  food: Food,
 }

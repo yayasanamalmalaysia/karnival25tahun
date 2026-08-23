@@ -32,8 +32,8 @@ export default function App() {
         <Hero onRegister={selectRegistration} />
         <Countdown />
         <RegistrationCards onSelect={selectRegistration} />
-        <BCLCheckout selected={selected} onSelect={selectRegistration} />
         <CarnivalActivities />
+        <BCLCheckout selected={selected} onSelect={selectRegistration} />
         <AnniversaryStory />
         <EventInfo />
         <Organizer />

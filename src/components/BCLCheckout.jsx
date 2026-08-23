@@ -5,13 +5,13 @@ import { Bike, Calendar, Check, Info, Lock, Run, Shirt } from './Icons'
 const formCopy = {
   funrun: {
     title: 'Pendaftaran Amal Fun Run',
-    strong: 'RM50 termasuk baju rasmi peserta',
-    detail: 'Sediakan maklumat peserta dan pilihan saiz baju.',
+    strong: 'Yuran pendaftaran RM50 termasuk baju, set sarapan dan sijil penyertaan',
+    detail: 'Sediakan maklumat peserta dan pilihan saiz baju untuk melengkapkan pendaftaran.',
     Icon: Run,
   },
   rider: {
     title: 'Pendaftaran Amal Rider',
-    strong: 'RM50 termasuk baju Amal Rider',
+    strong: 'Yuran pendaftaran RM50 termasuk baju, set sarapan dan sijil penyertaan',
     detail: 'Paparan fungsi menggunakan borang BCL Fun Run sebagai dummy.',
     Icon: Bike,
   },
@@ -76,6 +76,7 @@ export default function BCLCheckout({ selected, onSelect }) {
     <section className="section checkout-section" id="checkout" aria-labelledby="checkout-title">
       <div className="shell">
         <div className="section-heading centered">
+          <span className="section-kicker">Daftar Awal Sekarang</span>
           <h2 id="checkout-title">Lengkapkan Pendaftaran</h2>
           <p>Pilih aktiviti dan lengkapkan pendaftaran tanpa meninggalkan halaman ini.</p>
         </div>

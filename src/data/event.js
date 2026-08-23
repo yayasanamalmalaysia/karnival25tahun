@@ -14,16 +14,20 @@ export const EVENT = {
 }
 
 export const ASSETS = {
-  logo: asset('yam-logo.png'),
-  anniversaryLogo: asset('yam-25-logo.png'),
-  hero: asset('hero-community-bawal-draft.png'),
+  logo: asset('yam-logo-official.jpg'),
+  anniversaryLogo: asset('yam-25-logo-official.png'),
+  hero: asset('hero-community-syariah-final.png'),
   funRunLong: asset('funrun-long.jpeg'),
   funRunShort: asset('funrun-short.jpeg'),
+  funRunPeople: asset('funrun-wearing-mockup-final.png'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
   riderShirt: asset('rider-shirt-draft.png'),
   riderConvoy: asset('rider-convoy-draft.png'),
   jubileeLong: asset('jubilee-long.jpeg'),
   jubileePolo: asset('jubilee-polo.jpeg'),
+  jubileePeople: asset('jubilee-wearing-mockup-final.png'),
+  festivalKids: asset('festival-kids-running-syariah-final.png'),
+  festivalLandscape: asset('festival-landscape-syariah-final.png'),
 }
 
 export const REGISTRATIONS = {
@@ -32,7 +36,7 @@ export const REGISTRATIONS = {
     title: 'Amal Fun Run 2026',
     shortTitle: 'Fun Run',
     price: 'RM50',
-    highlight: 'Termasuk Baju Amal Fun Run',
+    highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
     embedUrl: BCL_DUMMY_URL,
     isDummy: true,
   },
@@ -41,7 +45,7 @@ export const REGISTRATIONS = {
     title: 'Amal Rider 2026',
     shortTitle: 'Amal Rider',
     price: 'RM50',
-    highlight: 'Termasuk Baju Amal Rider',
+    highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
     embedUrl: BCL_DUMMY_URL,
     isDummy: true,
   },
@@ -59,12 +63,13 @@ export const REGISTRATIONS = {
 export const CARNIVAL_ACTIVITIES = [
   ['run', 'Amal Fun Run', 'Pendaftaran dibuka'],
   ['bike', 'Amal Rider', 'Pendaftaran dibuka'],
-  ['family', 'Aktiviti Keluarga', 'Akan diumumkan'],
   ['child', 'Aktiviti Kanak-kanak', 'Akan diumumkan'],
-  ['booth', 'Booth & Pameran', 'Akan diumumkan'],
-  ['bag', 'Jualan / Vendor', 'Akan diumumkan'],
+  ['family', 'Aktiviti Keluarga', 'Akan diumumkan'],
+  ['booth', 'Booth Jualan', 'Akan diumumkan'],
+  ['exhibition', 'Pameran', 'Akan diumumkan'],
   ['stage', 'Program Pentas', 'Akan diumumkan'],
   ['community', 'Aktiviti Komuniti', 'Akan diumumkan'],
+  ['food', 'Makanan & Vendor', 'Akan diumumkan'],
 ]
 
 export const FAQS = [
@@ -74,9 +79,9 @@ export const FAQS = [
       'Tidak untuk versi akhir. Dalam draf ini, borang BCL yang sama digunakan sebagai dummy bagi menguji fungsi ketiga-tiga pilihan.',
   },
   {
-    question: 'Adakah RM50 termasuk baju?',
+    question: 'Apa yang termasuk dalam yuran RM50?',
     answer:
-      'Ya, bagi Fun Run dan Amal Rider, yuran RM50 termasuk baju aktiviti masing-masing.',
+      'Bagi Fun Run dan Amal Rider, yuran pendaftaran RM50 termasuk baju aktiviti, set sarapan dan sijil penyertaan.',
   },
   {
     question: 'Adakah Baju Jubli Perak sama dengan baju Fun Run?',
