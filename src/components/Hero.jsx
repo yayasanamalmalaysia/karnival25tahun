@@ -16,8 +16,8 @@ export default function Hero({ onRegister }) {
       <div className="shell hero-stage">
         <div className="hero-copy">
           <div className="hero-copy-inner">
-            <div className="hero-eyebrow"><span aria-hidden="true">★</span> Sambutan Rasmi Jubli Perak</div>
-            <h1><span className="hero-karnival">Karnival</span> Jubli Perak <em>25 Tahun</em> <small>Yayasan Amal Malaysia</small></h1>
+            <div className="hero-eyebrow"><span aria-hidden="true">★</span> Sambutan Rasmi @25 Tahun</div>
+            <h1><span className="hero-karnival">Festival</span> Labohan Dagang <em>@25 tahun</em> <small>Yayasan Amal Malaysia</small></h1>
             <div className="hero-facts" aria-label="Maklumat utama program">
               <p><Calendar /> <strong>{EVENT.dateLabel}</strong></p>
               <p><MapPin /> <strong>{EVENT.locationShort}</strong></p>
@@ -29,7 +29,7 @@ export default function Hero({ onRegister }) {
                 Daftar Aktiviti Sekarang <ArrowRight size={20} />
               </button>
               <a className="button button-ghost" href="#aktiviti">
-                Lihat Aktiviti Karnival <ArrowRight size={20} />
+                Lihat Aktiviti Festival <ArrowRight size={20} />
               </a>
             </div>
           </div>
@@ -37,8 +37,8 @@ export default function Hero({ onRegister }) {
 
         <div className="hero-visual">
           <figure className="hero-media">
-            <img src={ASSETS.hero} alt="Visual konsep suasana komuniti, keluarga, pelari dan penunggang sempena karnival" />
-            <figcaption>Visual konsep suasana Karnival Jubli Perak</figcaption>
+            <img src={ASSETS.hero} alt="Visual konsep suasana komuniti, keluarga, pelari dan penunggang sempena festival" />
+            <figcaption>Visual konsep suasana Festival Labohan Dagang</figcaption>
           </figure>
           <FloatingBadges />
           <img className="hero-kids" src={ASSETS.festivalKids} alt="" aria-hidden="true" />

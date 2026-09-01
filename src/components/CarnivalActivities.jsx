@@ -10,10 +10,10 @@ export default function CarnivalActivities() {
       <div className="shell">
         <div className="section-heading carnival-heading">
           <span className="section-kicker">Aktiviti Untuk Semua</span>
-          <h2>Meriahnya Karnival Jubli Perak</h2>
+          <h2>Meriahnya Festival Labohan Dagang</h2>
           <p>Meriah, ceria dan berkeluarga—pelbagai pengalaman menanti seluruh komuniti.</p>
         </div>
-        <div className="activity-rail" role="list" aria-label="Senarai aktiviti karnival">
+        <div className="activity-rail" role="list" aria-label="Senarai aktiviti festival">
           {CARNIVAL_ACTIVITIES.map(([icon, title, status], index) => {
             const ActivityIcon = ACTIVITY_ICONS[icon]
             return (
@@ -25,7 +25,7 @@ export default function CarnivalActivities() {
             )
           })}
         </div>
-        <img className="carnival-landscape" loading="lazy" src={ASSETS.festivalLandscape} alt="Ilustrasi suasana karnival patuh syariah dengan booth, pentas, pameran dan aktiviti keluarga" />
+        <img className="carnival-landscape" loading="lazy" src={ASSETS.festivalLandscape} alt="Ilustrasi suasana festival patuh syariah dengan booth, pentas, pameran dan aktiviti keluarga" />
       </div>
       <div className="carnival-road" aria-hidden="true"><span /></div>
     </section>

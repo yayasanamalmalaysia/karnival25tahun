@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-brand">
           <img src={ASSETS.anniversaryLogo} alt="Logo 25 Tahun Yayasan Amal Malaysia" />
           <h2>Yayasan Amal Malaysia</h2>
-          <p>Karnival Jubli Perak 25 Tahun</p>
+          <p>Festival Labohan Dagang @25 tahun</p>
           <p><Calendar size={18} /> 3 Oktober 2026</p>
           <p><MapPin size={18} /> Kg. Labohan Dagang, Selangor</p>
         </div>

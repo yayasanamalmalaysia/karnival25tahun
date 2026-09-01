@@ -3,8 +3,8 @@ const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
 export const BCL_DUMMY_URL = 'https://yayasanamalmalaysia.bcl.my/embed/form/karnival25tahunamalmalaysia'
 
 export const EVENT = {
-  title: 'Karnival Jubli Perak 25 Tahun Yayasan Amal Malaysia',
-  shortTitle: 'Karnival Jubli Perak',
+  title: 'Festival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
+  shortTitle: 'Festival Labohan Dagang',
   dateLabel: '3 Oktober 2026',
   dateTime: '2026-10-03T00:00:00+08:00',
   registrationCloseLabel: '16 September 2026',
