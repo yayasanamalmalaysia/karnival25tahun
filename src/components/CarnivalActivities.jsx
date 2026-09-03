@@ -14,10 +14,10 @@ export default function CarnivalActivities() {
           <p>Meriah, ceria dan berkeluarga—pelbagai pengalaman menanti seluruh komuniti.</p>
         </div>
         <div className="activity-rail" role="list" aria-label="Senarai aktiviti festival">
-          {CARNIVAL_ACTIVITIES.map(([icon, title, status], index) => {
+          {CARNIVAL_ACTIVITIES.map(([icon, title, status]) => {
             const ActivityIcon = ACTIVITY_ICONS[icon]
             return (
-              <article className={index < 2 ? 'activity-item is-open' : 'activity-item'} role="listitem" key={title}>
+              <article className={status === 'Pendaftaran dibuka' ? 'activity-item is-open' : 'activity-item'} role="listitem" key={title}>
                 <ActivityIcon size={30} />
                 <h3>{title}</h3>
                 <p>{status}</p>

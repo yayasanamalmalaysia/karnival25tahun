@@ -6,7 +6,6 @@ const items = [
   ['Utama', '#utama'],
   ['Aktiviti', '#aktiviti'],
   ['Fun Run', 'funrun'],
-  ['Amal Rider', 'rider'],
   ['Baju Jubli Perak', 'shirt'],
   ['Lokasi', '#lokasi'],
   ['FAQ', '#faq'],

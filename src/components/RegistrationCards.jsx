@@ -1,5 +1,5 @@
 import { ASSETS } from '../data/event'
-import { ArrowRight, Bike, Calendar, Check, Run, Shirt } from './Icons'
+import { ArrowRight, Calendar, Check, Run, Shirt } from './Icons'
 import { EVENT } from '../data/event'
 
 const Bullet = ({ children }) => <li><Check size={18} /> <span>{children}</span></li>
@@ -42,41 +42,6 @@ export function FunRunCard({ onSelect }) {
       </ul>
       <button className="button button-coral card-button" type="button" onClick={() => onSelect('funrun')}>
         Daftar Fun Run — RM50 <ArrowRight size={20} />
-      </button>
-    </article>
-  )
-}
-
-export function RiderCard({ onSelect }) {
-  return (
-    <article className="registration-card promo-card rider-card" id="amal-rider">
-      <span className="promo-sticker sticker-shirt">RM50 Pakej Lengkap</span>
-      <div className="card-heading">
-        <span className="card-icon"><Bike /></span>
-        <div>
-          <span className="card-kicker">Konvoi • Ukhuwah • Komuniti</span>
-          <h3>Amal Rider 2026</h3>
-        </div>
-      </div>
-      <div className="card-price-row">
-        <p className="price"><strong>RM50</strong><span>/ pendaftaran</span></p>
-        <span className="card-highlight">Baju • Sarapan • Sijil</span>
-      </div>
-      <div className="rider-stage">
-        <figure className="rider-visual">
-          <img loading="lazy" src={ASSETS.riderConvoy} alt="Visual konsep konvoi Amal Rider dengan pakaian menutup aurat" />
-          <figcaption>Visual konsep Amal Rider</figcaption>
-        </figure>
-        <img className="rider-shirt" loading="lazy" src={ASSETS.riderShirt} alt="Draf design baju Amal Rider 2026 pandangan depan dan belakang" />
-      </div>
-      <ul className="feature-list package-list" aria-label="Pakej pendaftaran Amal Rider">
-        <Bullet>Pendaftaran Amal Rider</Bullet>
-        <Bullet>Baju rasmi peserta</Bullet>
-        <Bullet>Set sarapan</Bullet>
-        <Bullet>Sijil penyertaan</Bullet>
-      </ul>
-      <button className="button button-primary card-button" type="button" onClick={() => onSelect('rider')}>
-        Daftar Amal Rider — RM50 <ArrowRight size={20} />
       </button>
     </article>
   )
@@ -135,7 +100,6 @@ export default function RegistrationCards({ onSelect }) {
         </div>
         <div className="registration-grid">
           <FunRunCard onSelect={onSelect} />
-          <RiderCard onSelect={onSelect} />
           <JubileeShirtCard onSelect={onSelect} />
         </div>
         <figure className="funrun-route-panel" id="laluan-fun-run">
@@ -155,8 +119,8 @@ export default function RegistrationCards({ onSelect }) {
             <span className="route-draft-note">Laluan tertakluk kepada pengesahan akhir penganjur.</span>
           </figcaption>
         </figure>
-        <p className="product-distinction" aria-label="Ketiga-tiga baju ialah design yang berasingan">
-          <span>Baju Fun Run</span><strong>≠</strong><span>Baju Amal Rider</span><strong>≠</strong><span>Baju Jubli Perak</span>
+        <p className="product-distinction" aria-label="Kedua-dua baju ialah design yang berasingan">
+          <span>Baju Fun Run</span><strong>≠</strong><span>Baju Jubli Perak</span>
         </p>
       </div>
     </section>

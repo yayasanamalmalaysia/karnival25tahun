@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { EVENT, REGISTRATIONS } from '../data/event'
-import { Bike, Calendar, Check, Info, Lock, Run, Shirt } from './Icons'
+import { Calendar, Check, Info, Lock, Run, Shirt } from './Icons'
 
 const formCopy = {
   funrun: {
@@ -8,12 +8,6 @@ const formCopy = {
     strong: 'Yuran pendaftaran RM50 termasuk baju, set sarapan dan sijil penyertaan',
     detail: 'Sediakan maklumat peserta dan pilihan saiz baju untuk melengkapkan pendaftaran.',
     Icon: Run,
-  },
-  rider: {
-    title: 'Pendaftaran Amal Rider',
-    strong: 'Yuran pendaftaran RM50 termasuk baju, set sarapan dan sijil penyertaan',
-    detail: 'Paparan fungsi menggunakan borang BCL Fun Run sebagai dummy.',
-    Icon: Bike,
   },
   shirt: {
     title: 'Tempahan Baju Jubli Perak',
@@ -51,7 +45,7 @@ function DummyBCL({ selected }) {
       </div>
       <div className="dummy-bcl-notice" role="note">
         <Info size={20} />
-        <p><strong>Demo fungsi:</strong> Ketiga-tiga pilihan menggunakan borang BCL yang sama buat sementara. Nama produk dan medan dalam borang masih mengikut borang asal.</p>
+        <p><strong>Demo fungsi:</strong> Kedua-dua pilihan menggunakan borang BCL yang sama buat sementara. Nama produk dan medan dalam borang masih mengikut borang asal.</p>
       </div>
       <div
         id="bcl-payment-form"
@@ -67,7 +61,6 @@ function DummyBCL({ selected }) {
 
 const selectorItems = [
   ['funrun', 'Amal Fun Run — RM50', Run],
-  ['rider', 'Amal Rider — RM50', Bike],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
 ]
 

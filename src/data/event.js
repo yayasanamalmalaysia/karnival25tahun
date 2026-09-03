@@ -21,8 +21,6 @@ export const ASSETS = {
   funRunShort: asset('funrun-short.jpeg'),
   funRunPeople: asset('funrun-wearing-mockup-final.png'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
-  riderShirt: asset('rider-shirt-draft.png'),
-  riderConvoy: asset('rider-convoy-draft.png'),
   jubileeLong: asset('jubilee-long.jpeg'),
   jubileePolo: asset('jubilee-polo.jpeg'),
   jubileePeople: asset('jubilee-wearing-mockup-final.png'),
@@ -35,15 +33,6 @@ export const REGISTRATIONS = {
     id: 'funrun',
     title: 'Amal Fun Run 2026',
     shortTitle: 'Fun Run',
-    price: 'RM50',
-    highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
-    embedUrl: BCL_DUMMY_URL,
-    isDummy: true,
-  },
-  rider: {
-    id: 'rider',
-    title: 'Amal Rider 2026',
-    shortTitle: 'Amal Rider',
     price: 'RM50',
     highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
     embedUrl: BCL_DUMMY_URL,
@@ -62,7 +51,6 @@ export const REGISTRATIONS = {
 
 export const CARNIVAL_ACTIVITIES = [
   ['run', 'Amal Fun Run', 'Pendaftaran dibuka'],
-  ['bike', 'Amal Rider', 'Pendaftaran dibuka'],
   ['child', 'Aktiviti Kanak-kanak', 'Akan diumumkan'],
   ['family', 'Aktiviti Keluarga', 'Akan diumumkan'],
   ['booth', 'Booth Jualan', 'Akan diumumkan'],
@@ -74,14 +62,9 @@ export const CARNIVAL_ACTIVITIES = [
 
 export const FAQS = [
   {
-    question: 'Adakah Fun Run dan Amal Rider menggunakan pendaftaran yang sama?',
-    answer:
-      'Tidak untuk versi akhir. Dalam draf ini, borang BCL yang sama digunakan sebagai dummy bagi menguji fungsi ketiga-tiga pilihan.',
-  },
-  {
     question: 'Apa yang termasuk dalam yuran RM50?',
     answer:
-      'Bagi Fun Run dan Amal Rider, yuran pendaftaran RM50 termasuk baju aktiviti, set sarapan dan sijil penyertaan.',
+      'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti, set sarapan dan sijil penyertaan.',
   },
   {
     question: 'Adakah Baju Jubli Perak sama dengan baju Fun Run?',

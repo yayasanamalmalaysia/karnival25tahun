@@ -15,7 +15,7 @@ Preview dibuka pada laluan `/karnival25tahun/`.
 
 ## Integrasi BCL
 
-- Fun Run, Amal Rider dan Baju Jubli Perak menggunakan URL serta script BCL yang sama sebagai dummy untuk demonstrasi fungsi.
+- Fun Run dan Baju Jubli Perak menggunakan URL serta script BCL yang sama sebagai dummy untuk demonstrasi fungsi.
 - Paparan dilabel **Mod dummy** kerana nama produk dan medan dalam borang masih mengikut borang asal.
 - Untuk versi live, gantikan setiap `embedUrl` dengan borang BCL akhir bagi pilihan berkenaan.
 - Konfigurasi berada dalam `src/data/event.js` dan komponen embed berada dalam `src/components/BCLCheckout.jsx`.

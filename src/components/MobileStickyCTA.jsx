@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import { Bike, ChevronDown, Run, Shirt } from './Icons'
+import { ChevronDown, Run, Shirt } from './Icons'
 
 const choices = [
   ['funrun', 'Fun Run', Run],
-  ['rider', 'Amal Rider', Bike],
   ['shirt', 'Baju Jubli Perak', Shirt],
 ]
 
