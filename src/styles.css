@@ -207,6 +207,8 @@
   .wearing-mockup img { height: 100%; object-fit: cover; width: 100%; }
   .funrun-catalogue { background: rgba(255, 255, 255, .75); height: 250px; }
   .funrun-catalogue img { object-fit: contain; padding: 4px; }
+  .jubilee-catalogue { background: rgba(255, 255, 255, .75); height: 250px; }
+  .jubilee-catalogue img { object-fit: contain; padding: 4px; }
   .wearing-mockup figcaption { background: rgba(6, 60, 45, .88); border-radius: 999px; bottom: 9px; color: var(--white); font-size: .63rem; font-weight: 800; left: 9px; padding: 6px 9px; position: absolute; }
   .wearing-mockup-jubilee figcaption { background: rgba(104, 26, 43, .9); }
   .product-splash { background: var(--coral); border-radius: 48% 52% 61% 39%; bottom: 1px; height: 80px; left: 7%; opacity: .2; position: absolute; right: 7%; transform: rotate(-5deg); }

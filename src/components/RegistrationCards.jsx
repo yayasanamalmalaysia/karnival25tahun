@@ -63,13 +63,13 @@ export function JubileeShirtCard({ onSelect }) {
       </div>
       <div className="product-stage merchandise-stage">
         <div className="product-pair jubilee-products">
-          <ProductImage src={ASSETS.jubileeLong} alt="Design rasmi baju Jubli Perak lengan panjang" />
-          <ProductImage src={ASSETS.jubileePolo} alt="Design rasmi baju Jubli Perak jenis polo" />
+          <ProductImage src={ASSETS.jubileePolo} alt="Katalog reka bentuk baju Jubli Perak polo lengan pendek, paparan depan dan belakang" />
+          <ProductImage src={ASSETS.jubileeLong} alt="Katalog reka bentuk baju Jubli Perak polo lengan panjang, paparan depan dan belakang" />
         </div>
       </div>
-      <figure className="wearing-mockup wearing-mockup-jubilee">
-        <img loading="lazy" src={ASSETS.jubileePeople} alt="Mockup lelaki dan wanita bertudung memakai design final baju rasmi Jubli Perak" />
-        <figcaption>Mockup pemakaian • Koleksi rasmi 25 Tahun</figcaption>
+      <figure className="wearing-mockup wearing-mockup-jubilee jubilee-catalogue">
+        <img loading="lazy" src={ASSETS.jubileeMuslimah} alt="Katalog reka bentuk baju Jubli Perak muslimah A-cut, paparan depan dan belakang" />
+        <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
       <dl className="product-fields">
         <div><dt>Jenis</dt><dd>Akan disahkan</dd></div>

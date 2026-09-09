@@ -20,9 +20,9 @@ export const ASSETS = {
   funRunShort: asset('funrun-short-catalogue.jpeg'),
   funRunMuslimah: asset('funrun-muslimah-catalogue.jpeg'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
-  jubileeLong: asset('jubilee-long.jpeg'),
-  jubileePolo: asset('jubilee-polo.jpeg'),
-  jubileePeople: asset('jubilee-wearing-mockup-final.png'),
+  jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
+  jubileeLong: asset('jubilee-polo-long-catalogue.jpeg'),
+  jubileeMuslimah: asset('jubilee-muslimah-acut-catalogue.jpeg'),
   festivalKids: asset('festival-kids-running-syariah-final.png'),
   festivalLandscape: asset('festival-landscape-syariah-final.png'),
 }
