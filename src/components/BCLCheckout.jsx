@@ -11,7 +11,7 @@ const formCopy = {
   },
   shirt: {
     title: 'Tempahan Baju Jubli Perak',
-    strong: 'Tempahan berasingan — harga akan disahkan',
+    strong: 'RM30 setiap helai • Tempahan berasingan',
     detail: 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.',
     Icon: Shirt,
   },
@@ -52,7 +52,7 @@ function BCLForm({ selected }) {
           <p><strong>{current.strong}</strong></p>
           <p>{current.detail}</p>
         </div>
-        <span className="official-form"><Lock size={20} /> Integrasi BCL aktif</span>
+        <span className="official-form"><Lock size={20} /> Borang rasmi BCL</span>
       </div>
       <div
         id="bcl-payment-form"
