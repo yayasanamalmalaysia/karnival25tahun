@@ -281,8 +281,6 @@
   .checkout-panel-heading h3 { color: var(--green-900); font-family: var(--display); font-size: 1.65rem; line-height: 1; }
   .checkout-panel-heading p { color: var(--ink-soft); font-size: .82rem; margin-top: 5px; }
   .official-form { align-items: center; background: var(--green-900); border-radius: 999px; color: var(--white); display: inline-flex; font-size: .65rem; font-weight: 800; gap: 6px; padding: 8px 10px; }
-  .dummy-bcl-notice { align-items: flex-start; background: #fff7cf; border-bottom: 1px solid rgba(215, 169, 40, .35); border-top: 1px solid rgba(215, 169, 40, .35); color: #5f4a13; display: flex; font-size: .72rem; gap: 9px; padding: 12px 22px; }
-  .dummy-bcl-notice svg { flex: 0 0 auto; }
   #bcl-payment-form { min-height: 840px; padding: 14px; position: relative; }
   #bcl-payment-form iframe { border: 0 !important; display: block; min-height: 1120px; width: 100% !important; }
   .bcl-loading { color: var(--ink-soft); padding: 20px; text-align: center; }
@@ -473,7 +471,6 @@
     .checkout-icon { height: 48px; width: 48px; }
     .checkout-panel-heading h3 { font-size: 1.3rem; }
     .official-form { grid-column: 1 / -1; justify-self: start; }
-    .dummy-bcl-notice { padding: 11px 15px; }
     #bcl-payment-form { min-height: 980px; padding: 4px; }
     #bcl-payment-form iframe { min-height: 1500px; }
     .anniversary-story { padding: 72px 0; }

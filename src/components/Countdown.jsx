@@ -17,7 +17,7 @@ export default function Countdown() {
         <div className="countdown-heading">
           <span>Raikan 25 Tahun Bersama Kami</span>
           <h2 id="countdown-title">Menuju Hari Festival!</h2>
-          <p>3 Oktober 2026 • Kg. Labohan Dagang</p>
+          <p>{EVENT.dateLabel} • Kg. Labohan Dagang</p>
         </div>
         <div className="countdown-grid" aria-live="polite">
           {units.map(([label, value]) => (

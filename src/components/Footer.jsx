@@ -1,4 +1,4 @@
-import { ASSETS } from '../data/event'
+import { ASSETS, EVENT } from '../data/event'
 import { Calendar, MapPin } from './Icons'
 
 const footerLinks = ['Tentang Program', 'Aktiviti', 'Pendaftaran', 'Hubungi Kami', 'Polisi Privasi', 'Terma & Syarat']
@@ -11,7 +11,7 @@ export default function Footer() {
           <img src={ASSETS.anniversaryLogo} alt="Logo 25 Tahun Yayasan Amal Malaysia" />
           <h2>Yayasan Amal Malaysia</h2>
           <p>Festival Labohan Dagang @25 tahun</p>
-          <p><Calendar size={18} /> 3 Oktober 2026</p>
+          <p><Calendar size={18} /> {EVENT.dateLabel}</p>
           <p><MapPin size={18} /> Kg. Labohan Dagang, Selangor</p>
         </div>
         <nav className="footer-nav" aria-label="Pautan footer">

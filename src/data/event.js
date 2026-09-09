@@ -1,13 +1,12 @@
 const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
 
-export const BCL_DUMMY_URL = 'https://yayasanamalmalaysia.bcl.my/embed/form/karnival25tahunamalmalaysia'
+export const BCL_SCRIPT_URL = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
 
 export const EVENT = {
   title: 'Festival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
   shortTitle: 'Festival Labohan Dagang',
-  dateLabel: '3 Oktober 2026',
-  dateTime: '2026-10-03T00:00:00+08:00',
-  registrationCloseLabel: '16 September 2026',
+  dateLabel: '14 November 2026',
+  dateTime: '2026-11-14T00:00:00+08:00',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
   tagline: '25 Tahun Membina Legasi, Memimpin Transformasi',
@@ -35,8 +34,7 @@ export const REGISTRATIONS = {
     shortTitle: 'Fun Run',
     price: 'RM50',
     highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
-    embedUrl: BCL_DUMMY_URL,
-    isDummy: true,
+    embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/festival25tahun',
   },
   shirt: {
     id: 'shirt',
@@ -44,8 +42,7 @@ export const REGISTRATIONS = {
     shortTitle: 'Baju Jubli Perak',
     price: null,
     highlight: 'Keluaran khas • Tempahan berasingan',
-    embedUrl: BCL_DUMMY_URL,
-    isDummy: true,
+    embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/bajujubliperak',
   },
 }
 

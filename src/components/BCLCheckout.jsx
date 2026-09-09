@@ -1,6 +1,6 @@
-import { useEffect } from 'react'
-import { EVENT, REGISTRATIONS } from '../data/event'
-import { Calendar, Check, Info, Lock, Run, Shirt } from './Icons'
+import { useEffect, useRef } from 'react'
+import { BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
+import { Check, Lock, Run, Shirt } from './Icons'
 
 const formCopy = {
   funrun: {
@@ -12,25 +12,36 @@ const formCopy = {
   shirt: {
     title: 'Tempahan Baju Jubli Perak',
     strong: 'Tempahan berasingan — harga akan disahkan',
-    detail: 'Paparan fungsi menggunakan borang BCL Fun Run sebagai dummy.',
+    detail: 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.',
     Icon: Shirt,
   },
 }
 
-function DummyBCL({ selected }) {
+function BCLForm({ selected }) {
   const current = formCopy[selected]
   const ItemIcon = current.Icon
+  const formRef = useRef(null)
 
   useEffect(() => {
-    const selector = 'script[data-karnival-bcl="dummy"]'
-    if (document.querySelector(selector)) return
+    const form = formRef.current
+    if (!form) return undefined
+
+    // BCL reads #bcl-payment-form when its script executes. Recreate that
+    // script on every selection so the active product form replaces the prior iframe.
+    form.replaceChildren()
+    const loading = document.createElement('p')
+    loading.className = 'bcl-loading'
+    loading.textContent = 'Memuatkan borang BCL…'
+    form.appendChild(loading)
 
     const script = document.createElement('script')
-    script.src = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
+    script.src = BCL_SCRIPT_URL
     script.async = true
-    script.dataset.karnivalBcl = 'dummy'
+    script.dataset.karnivalBcl = selected
     document.body.appendChild(script)
-  }, [])
+
+    return () => script.remove()
+  }, [selected])
 
   return (
     <div className="checkout-panel bcl-shell">
@@ -41,19 +52,15 @@ function DummyBCL({ selected }) {
           <p><strong>{current.strong}</strong></p>
           <p>{current.detail}</p>
         </div>
-        <span className="official-form"><Lock size={20} /> Integrasi BCL aktif • Mod dummy</span>
-      </div>
-      <div className="dummy-bcl-notice" role="note">
-        <Info size={20} />
-        <p><strong>Demo fungsi:</strong> Kedua-dua pilihan menggunakan borang BCL yang sama buat sementara. Nama produk dan medan dalam borang masih mengikut borang asal.</p>
+        <span className="official-form"><Lock size={20} /> Integrasi BCL aktif</span>
       </div>
       <div
         id="bcl-payment-form"
+        ref={formRef}
         data-url={REGISTRATIONS[selected].embedUrl}
-        data-dummy-for={selected}
-        aria-label={`Borang BCL dummy untuk ${current.title}`}
+        aria-label={`Borang BCL untuk ${current.title}`}
       >
-        <p className="bcl-loading">Memuatkan borang BCL dummy…</p>
+        <p className="bcl-loading">Memuatkan borang BCL…</p>
       </div>
     </div>
   )
@@ -89,11 +96,9 @@ export default function BCLCheckout({ selected, onSelect }) {
                 {selected === id && <Check className="selector-check" size={20} />}
               </button>
             ))}
-            <div className="registration-close-note"><Calendar size={20} /> Pendaftaran ditutup {EVENT.registrationCloseLabel}.</div>
-            <div className="checkout-note"><Info size={20} /> Versi draf menggunakan satu borang BCL sebagai dummy untuk semua pilihan.</div>
           </aside>
           <div className="checkout-content">
-            <DummyBCL selected={selected} />
+            <BCLForm selected={selected} />
           </div>
         </div>
       </div>

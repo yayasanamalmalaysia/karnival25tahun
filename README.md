@@ -1,8 +1,8 @@
-# Draf Festival Labohan Dagang @25 tahun YAM
+# Festival Labohan Dagang @25 tahun YAM
 
 Frontend React/Vite untuk semakan design, susunan kandungan dan aliran pendaftaran.
 
-Tarikh tutup pendaftaran yang dipaparkan: **16 September 2026**.
+Tarikh festival yang dipaparkan: **14 November 2026**.
 
 ## Jalankan secara tempatan
 
@@ -15,9 +15,9 @@ Preview dibuka pada laluan `/karnival25tahun/`.
 
 ## Integrasi BCL
 
-- Fun Run dan Baju Jubli Perak menggunakan URL serta script BCL yang sama sebagai dummy untuk demonstrasi fungsi.
-- Paparan dilabel **Mod dummy** kerana nama produk dan medan dalam borang masih mengikut borang asal.
-- Untuk versi live, gantikan setiap `embedUrl` dengan borang BCL akhir bagi pilihan berkenaan.
+- Fun Run menggunakan `https://yayasanamalmalaysia.bcl.my/embed/form/festival25tahun`.
+- Baju Jubli Perak menggunakan `https://yayasanamalmalaysia.bcl.my/embed/form/bajujubliperak`.
+- Skrip BCL `https://bcl.my/js/bc-encrypted-payment-embed.js` dimuatkan semula apabila peserta menukar pilihan, supaya borang aktif sentiasa sepadan dengan produk yang dipilih.
 - Konfigurasi berada dalam `src/data/event.js` dan komponen embed berada dalam `src/components/BCLCheckout.jsx`.
 
 ## Peta Fun Run
