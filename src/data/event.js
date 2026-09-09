@@ -10,6 +10,7 @@ export const EVENT = {
   shirtFirstBatchCloseLabel: '20 September 2026',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
+  mapUrl: 'https://maps.app.goo.gl/T72UUvqh65MFJPvp8',
   tagline: '25 Tahun Membina Legasi, Memimpin Transformasi',
 }
 

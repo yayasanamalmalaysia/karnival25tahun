@@ -308,6 +308,10 @@
   .pending-info > div { align-items: center; background: #f4fbfd; border-radius: 12px; display: flex; font-size: .7rem; justify-content: space-between; padding: 11px; }
   .pending-info span { align-items: center; display: flex; gap: 6px; }
   .pending-info strong { color: var(--ink-soft); font-size: .62rem; }
+  .map-link { align-items: center; background: #f4fbfd; border-radius: 12px; display: flex; font-size: .7rem; justify-content: space-between; margin-top: 22px; padding: 11px; }
+  .map-link > span { align-items: center; display: flex; gap: 6px; }
+  .map-link a { color: var(--green-800); font-size: .68rem; font-weight: 800; text-decoration: none; }
+  .map-link a:hover, .map-link a:focus-visible { color: var(--coral-deep); text-decoration: underline; }
 
   .organizer { background: var(--white); padding: 64px 0; }
   .organizer-inner { align-items: center; display: flex; justify-content: space-between; }
