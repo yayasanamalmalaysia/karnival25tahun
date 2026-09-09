@@ -1,6 +1,5 @@
 import { ASSETS } from '../data/event'
-import { ArrowRight, Calendar, Check, Run, Shirt } from './Icons'
-import { EVENT } from '../data/event'
+import { ArrowRight, Check, Run, Shirt } from './Icons'
 
 const Bullet = ({ children }) => <li><Check size={18} /> <span>{children}</span></li>
 
@@ -25,14 +24,14 @@ export function FunRunCard({ onSelect }) {
       </div>
       <div className="product-stage">
         <div className="product-pair">
-          <ProductImage src={ASSETS.funRunLong} alt="Design rasmi baju Amal Fun Run lengan panjang" />
-          <ProductImage src={ASSETS.funRunShort} alt="Design rasmi baju Amal Fun Run lengan pendek" />
+          <ProductImage src={ASSETS.funRunShort} alt="Katalog reka bentuk baju Amal Fun Run lengan pendek, paparan depan dan belakang" />
+          <ProductImage src={ASSETS.funRunLong} alt="Katalog reka bentuk baju Amal Fun Run lengan panjang, paparan depan dan belakang" />
         </div>
         <span className="product-splash" aria-hidden="true" />
       </div>
-      <figure className="wearing-mockup">
-        <img loading="lazy" src={ASSETS.funRunPeople} alt="Mockup lelaki dan wanita bertudung memakai design final baju Amal Fun Run" />
-        <figcaption>Mockup pemakaian • Design baju final</figcaption>
+      <figure className="wearing-mockup funrun-catalogue">
+        <img loading="lazy" src={ASSETS.funRunMuslimah} alt="Katalog reka bentuk baju muslimah Amal Fun Run, paparan depan dan belakang" />
+        <figcaption>Baju muslimah • Paparan depan & belakang</figcaption>
       </figure>
       <ul className="feature-list package-list" aria-label="Pakej pendaftaran Amal Fun Run">
         <Bullet>Pendaftaran Amal Fun Run</Bullet>
@@ -92,11 +91,6 @@ export default function RegistrationCards({ onSelect }) {
           <span className="section-kicker">Sertai Acara Paling Meriah Tahun Ini</span>
           <h2>Pilih Penyertaan Anda</h2>
           <p>Jom jadi sebahagian daripada sejarah 25 tahun AMAL.</p>
-        </div>
-        <div className="registration-deadline" role="note">
-          <Calendar size={22} />
-          <span>Tarikh tutup pendaftaran</span>
-          <strong>{EVENT.registrationCloseLabel}</strong>
         </div>
         <div className="registration-grid">
           <FunRunCard onSelect={onSelect} />
