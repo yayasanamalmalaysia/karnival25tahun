@@ -1,5 +1,5 @@
-import { ASSETS } from '../data/event'
-import { ArrowRight, Check, Run, Shirt } from './Icons'
+import { ASSETS, EVENT } from '../data/event'
+import { ArrowRight, Calendar, Check, Run, Shirt } from './Icons'
 
 const Bullet = ({ children }) => <li><Check size={18} /> <span>{children}</span></li>
 
@@ -91,6 +91,11 @@ export default function RegistrationCards({ onSelect }) {
           <span className="section-kicker">Sertai Acara Paling Meriah Tahun Ini</span>
           <h2>Pilih Penyertaan Anda</h2>
           <p>Jom jadi sebahagian daripada sejarah 25 tahun AMAL.</p>
+        </div>
+        <div className="registration-deadline" role="note">
+          <Calendar size={22} />
+          <span>Tarikh tutup 1st batch tempahan baju</span>
+          <strong>{EVENT.shirtFirstBatchCloseLabel}</strong>
         </div>
         <div className="registration-grid">
           <FunRunCard onSelect={onSelect} />

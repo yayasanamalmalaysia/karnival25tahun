@@ -7,6 +7,7 @@ export const EVENT = {
   shortTitle: 'Festival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
+  shirtFirstBatchCloseLabel: '20 September 2026',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
   tagline: '25 Tahun Membina Legasi, Memimpin Transformasi',
