@@ -5,7 +5,7 @@ import { Check, Lock, Run, Shirt } from './Icons'
 const formCopy = {
   funrun: {
     title: 'Pendaftaran Amal Fun Run',
-    strong: 'Yuran pendaftaran RM50 termasuk baju, set sarapan dan sijil penyertaan',
+    strong: 'Yuran pendaftaran RM50 termasuk baju, medal dan sijil penyertaan',
     detail: 'Sediakan maklumat peserta dan pilihan saiz baju untuk melengkapkan pendaftaran.',
     Icon: Run,
   },

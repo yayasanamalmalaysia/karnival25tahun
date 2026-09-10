@@ -11,7 +11,7 @@ pnpm install
 pnpm dev
 ```
 
-Preview dibuka pada laluan `/karnival25tahun/`.
+Build menggunakan laluan aset relatif, jadi pakej yang sama boleh diterbitkan pada `/karnival25tahun/` dan `/festival/`.
 
 ## Integrasi BCL
 

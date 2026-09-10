@@ -21,10 +21,12 @@ export const ASSETS = {
   funRunLong: asset('funrun-long-catalogue.jpeg'),
   funRunShort: asset('funrun-short-catalogue.jpeg'),
   funRunMuslimah: asset('funrun-muslimah-catalogue.jpeg'),
+  funRunSizeChart: asset('funrun-size-chart.jpeg'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
   jubileeLong: asset('jubilee-polo-long-catalogue.jpeg'),
   jubileeMuslimah: asset('jubilee-muslimah-acut-catalogue.jpeg'),
+  jubileeMuslimahSizeChart: asset('jubilee-muslimah-size-chart.jpeg'),
   festivalKids: asset('festival-kids-running-syariah-final.png'),
   festivalLandscape: asset('festival-landscape-syariah-final.png'),
 }
@@ -35,7 +37,7 @@ export const REGISTRATIONS = {
     title: 'Amal Fun Run 2026',
     shortTitle: 'Fun Run',
     price: 'RM50',
-    highlight: 'Yuran pendaftaran termasuk baju, set sarapan & sijil penyertaan',
+    highlight: 'Yuran pendaftaran termasuk baju, medal & sijil penyertaan',
     embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/festival25tahun',
   },
   shirt: {
@@ -63,7 +65,7 @@ export const FAQS = [
   {
     question: 'Apa yang termasuk dalam yuran RM50?',
     answer:
-      'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti, set sarapan dan sijil penyertaan.',
+      'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti, medal dan sijil penyertaan.',
   },
   {
     question: 'Adakah Baju Jubli Perak sama dengan baju Fun Run?',

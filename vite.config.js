@@ -3,5 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/karnival25tahun/',
+  // Guna asset relatif supaya build yang sama berfungsi di /karnival25tahun/ dan /festival/.
+  base: './',
 })
