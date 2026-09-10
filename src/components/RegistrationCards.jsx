@@ -84,7 +84,14 @@ export function FunRunCard({ onSelect, onOpenImage }) {
       <SizeChart
         src={ASSETS.funRunSizeChart}
         alt="Carta saiz Amal Fun Run untuk baju lengan pendek dalam ukuran inci"
-        title="Carta Saiz Amal Fun Run"
+        title="Carta Saiz Baju Unisex"
+        variant="funrun"
+        onOpen={onOpenImage}
+      />
+      <SizeChart
+        src={ASSETS.jubileeMuslimahSizeChart}
+        alt="Carta saiz baju muslimah Amal Fun Run dalam ukuran inci"
+        title="Carta Saiz Baju Muslimah"
         variant="funrun"
         onOpen={onOpenImage}
       />
@@ -126,6 +133,13 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         <CatalogueImage src={ASSETS.jubileeMuslimah} alt="Katalog reka bentuk baju Jubli Perak muslimah A-cut, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
+      <SizeChart
+        src={ASSETS.funRunSizeChart}
+        alt="Carta saiz baju unisex Jubli Perak dalam ukuran inci"
+        title="Carta Saiz Baju Unisex"
+        variant="jubilee"
+        onOpen={onOpenImage}
+      />
       <SizeChart
         src={ASSETS.jubileeMuslimahSizeChart}
         alt="Carta saiz baju muslimah Jubli Perak dalam ukuran inci"
