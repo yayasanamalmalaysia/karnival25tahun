@@ -55,6 +55,23 @@ function SizeChart({ src, alt, title, variant, onOpen }) {
   )
 }
 
+const SHIRT_DETAILS = [
+  ['Material', 'Sublimation Diamond'],
+  ['Ketebalan', '180gsm'],
+  ['Harga', 'RM30'],
+  ['Saiz & kuantiti', 'Dalam borang tempahan'],
+]
+
+function ProductDetails() {
+  return (
+    <dl className="product-fields" aria-label="Maklumat baju">
+      {SHIRT_DETAILS.map(([label, value]) => (
+        <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
+      ))}
+    </dl>
+  )
+}
+
 export function FunRunCard({ onSelect, onOpenImage }) {
   return (
     <article className="registration-card promo-card funrun-card" id="fun-run">
@@ -95,6 +112,7 @@ export function FunRunCard({ onSelect, onOpenImage }) {
         variant="funrun"
         onOpen={onOpenImage}
       />
+      <ProductDetails />
       <ul className="feature-list package-list" aria-label="Pakej pendaftaran Amal Fun Run">
         <Bullet>Pendaftaran Amal Fun Run</Bullet>
         <Bullet>Baju rasmi peserta</Bullet>
@@ -146,11 +164,7 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         variant="jubilee"
         onOpen={onOpenImage}
       />
-      <dl className="product-fields">
-        <div><dt>Jenis</dt><dd>Akan disahkan</dd></div>
-        <div><dt>Harga</dt><dd>Akan disahkan</dd></div>
-        <div><dt>Saiz & kuantiti</dt><dd>Dalam borang tempahan</dd></div>
-      </dl>
+      <ProductDetails />
       <button className="button button-gold card-button" type="button" onClick={() => onSelect('shirt')}>
         Tempah Baju Jubli Perak <ArrowRight size={20} />
       </button>
