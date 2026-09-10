@@ -37,7 +37,7 @@ export const REGISTRATIONS = {
     title: 'Amal Fun Run 2026',
     shortTitle: 'Fun Run',
     price: 'RM50',
-    highlight: 'Yuran pendaftaran termasuk baju, medal & sijil penyertaan',
+    highlight: 'Yuran pendaftaran termasuk baju & medal',
     embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/festival25tahun',
   },
   shirt: {
@@ -65,7 +65,7 @@ export const FAQS = [
   {
     question: 'Apa yang termasuk dalam yuran RM50?',
     answer:
-      'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti, medal dan sijil penyertaan.',
+      'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti dan medal.',
   },
   {
     question: 'Adakah Baju Jubli Perak sama dengan baju Fun Run?',

@@ -68,7 +68,7 @@ export function FunRunCard({ onSelect, onOpenImage }) {
       </div>
       <div className="card-price-row">
         <p className="price"><strong>RM50</strong><span>/ pendaftaran</span></p>
-        <span className="card-highlight">Baju • Medal • Sijil</span>
+        <span className="card-highlight">Baju • Medal</span>
       </div>
       <div className="product-stage">
         <div className="product-pair">
@@ -99,7 +99,6 @@ export function FunRunCard({ onSelect, onOpenImage }) {
         <Bullet>Pendaftaran Amal Fun Run</Bullet>
         <Bullet>Baju rasmi peserta</Bullet>
         <Bullet>Medal</Bullet>
-        <Bullet>Sijil penyertaan</Bullet>
       </ul>
       <button className="button button-coral card-button" type="button" onClick={() => onSelect('funrun')}>
         Daftar Fun Run — RM50 <ArrowRight size={20} />
