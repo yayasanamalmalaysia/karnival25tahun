@@ -64,6 +64,8 @@ export const CARNIVAL_ACTIVITIES = [
   ['child', 'Aktiviti Kanak-kanak', 'Akan diumumkan'],
   ['family', 'Mini Petting Zoo', 'Akan diumumkan'],
   ['booth', 'Barrel Ride (Kanak-kanak)', 'Akan diumumkan'],
+  ['booth', 'Booth Jualan', 'Akan diumumkan'],
+  ['exhibition', 'Pameran', 'Akan diumumkan'],
 ]
 
 export const FAQS = [
