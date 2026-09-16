@@ -169,8 +169,8 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
       <div className="product-pair kids-product-pair">
-        <ProductImage src={ASSETS.funRunKidsBoy} alt="Katalog baju kanak-kanak lelaki, paparan depan dan belakang" onOpen={onOpenImage} />
-        <ProductImage src={ASSETS.funRunKidsMuslimah} alt="Katalog baju kanak-kanak muslimah, paparan depan dan belakang" onOpen={onOpenImage} />
+        <ProductImage src={ASSETS.jubileeKidsBoy} alt="Katalog baju Jubli Perak kanak-kanak lelaki, paparan depan dan belakang" onOpen={onOpenImage} />
+        <ProductImage src={ASSETS.jubileeKidsMuslimah} alt="Katalog baju Jubli Perak kanak-kanak muslimah, paparan depan dan belakang" onOpen={onOpenImage} />
       </div>
       <SizeChart
         src={ASSETS.sizeTshirtPolo}

@@ -30,6 +30,8 @@ export const ASSETS = {
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
   jubileeLong: asset('jubilee-polo-long-catalogue.jpeg'),
   jubileeMuslimah: asset('jubilee-muslimah-acut-catalogue.jpeg'),
+  jubileeKidsBoy: asset('jubilee-kids-boy.jpeg'),
+  jubileeKidsMuslimah: asset('jubilee-kids-muslimah.png'),
   jubileeMuslimahSizeChart: asset('jubilee-muslimah-size-chart.jpeg'),
   festivalKids: asset('festival-kids-running-syariah-final.png'),
   festivalLandscape: asset('festival-landscape-syariah-final.png'),
