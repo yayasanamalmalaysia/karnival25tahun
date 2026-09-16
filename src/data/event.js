@@ -3,8 +3,8 @@ const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
 export const BCL_SCRIPT_URL = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
 
 export const EVENT = {
-  title: 'Festival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
-  shortTitle: 'Festival Labohan Dagang',
+  title: 'Karnival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
+  shortTitle: 'Karnival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
   shirtFirstBatchCloseLabel: '20 September 2026',
@@ -21,7 +21,11 @@ export const ASSETS = {
   funRunLong: asset('funrun-long-catalogue.jpeg'),
   funRunShort: asset('funrun-short-catalogue.jpeg'),
   funRunMuslimah: asset('funrun-muslimah-catalogue.jpeg'),
-  funRunSizeChart: asset('funrun-size-chart.jpeg'),
+  funRunKidsBoy: asset('funrun-kids-boy.jpeg'),
+  funRunKidsMuslimah: asset('funrun-kids-muslimah.jpeg'),
+  sizeTshirtPolo: asset('size-tshirt-polo-adult-kids.jpeg'),
+  sizeLongSleeve: asset('size-long-sleeve-adult.jpeg'),
+  sizeMuslimah: asset('size-muslimah-adult-kids.jpeg'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
   jubileeLong: asset('jubilee-polo-long-catalogue.jpeg'),
@@ -52,13 +56,12 @@ export const REGISTRATIONS = {
 
 export const CARNIVAL_ACTIVITIES = [
   ['run', 'Amal Fun Run', 'Pendaftaran dibuka'],
+  ['stage', 'Memanah', 'Akan diumumkan'],
+  ['community', 'Belon Supa Dupa', 'Akan diumumkan'],
+  ['exhibition', 'E-Sport Mobile Legend', 'Akan diumumkan'],
   ['child', 'Aktiviti Kanak-kanak', 'Akan diumumkan'],
-  ['family', 'Aktiviti Keluarga', 'Akan diumumkan'],
-  ['booth', 'Booth Jualan', 'Akan diumumkan'],
-  ['exhibition', 'Pameran', 'Akan diumumkan'],
-  ['stage', 'Program Pentas', 'Akan diumumkan'],
-  ['community', 'Aktiviti Komuniti', 'Akan diumumkan'],
-  ['food', 'Makanan & Vendor', 'Akan diumumkan'],
+  ['family', 'Mini Petting Zoo', 'Akan diumumkan'],
+  ['booth', 'Barrel Ride (Kanak-kanak)', 'Akan diumumkan'],
 ]
 
 export const FAQS = [

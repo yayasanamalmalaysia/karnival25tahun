@@ -62,10 +62,17 @@ const SHIRT_DETAILS = [
   ['Saiz & kuantiti', 'Dalam borang tempahan'],
 ]
 
-function ProductDetails() {
+const FUN_RUN_DETAILS = [
+  ['Material', 'Sublimation Diamond'],
+  ['Ketebalan', '180gsm'],
+  ['Pendaftaran', 'RM50'],
+  ['Saiz & kuantiti', 'Dalam borang pendaftaran'],
+]
+
+function ProductDetails({ details = SHIRT_DETAILS }) {
   return (
     <dl className="product-fields" aria-label="Maklumat baju">
-      {SHIRT_DETAILS.map(([label, value]) => (
+      {details.map(([label, value]) => (
         <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
       ))}
     </dl>
@@ -98,21 +105,32 @@ export function FunRunCard({ onSelect, onOpenImage }) {
         <CatalogueImage src={ASSETS.funRunMuslimah} alt="Katalog reka bentuk baju muslimah Amal Fun Run, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah • Paparan depan & belakang</figcaption>
       </figure>
+      <div className="product-pair kids-product-pair">
+        <ProductImage src={ASSETS.funRunKidsBoy} alt="Katalog baju kanak-kanak lelaki Amal Fun Run, paparan depan dan belakang" onOpen={onOpenImage} />
+        <ProductImage src={ASSETS.funRunKidsMuslimah} alt="Katalog baju kanak-kanak muslimah Amal Fun Run, paparan depan dan belakang" onOpen={onOpenImage} />
+      </div>
       <SizeChart
-        src={ASSETS.funRunSizeChart}
-        alt="Carta saiz Amal Fun Run untuk baju lengan pendek dalam ukuran inci"
-        title="Carta Saiz Baju Unisex"
+        src={ASSETS.sizeTshirtPolo}
+        alt="Carta saiz baju T-shirt dan polo dewasa serta kanak-kanak dalam ukuran inci"
+        title="Carta Saiz T-shirt & Polo"
         variant="funrun"
         onOpen={onOpenImage}
       />
       <SizeChart
-        src={ASSETS.jubileeMuslimahSizeChart}
-        alt="Carta saiz baju muslimah Amal Fun Run dalam ukuran inci"
-        title="Carta Saiz Baju Muslimah"
+        src={ASSETS.sizeLongSleeve}
+        alt="Carta saiz baju lengan panjang dewasa dalam ukuran inci"
+        title="Carta Saiz Lengan Panjang"
         variant="funrun"
         onOpen={onOpenImage}
       />
-      <ProductDetails />
+      <SizeChart
+        src={ASSETS.sizeMuslimah}
+        alt="Carta saiz baju muslimah dewasa dan kanak-kanak dalam ukuran inci"
+        title="Carta Saiz Muslimah Dewasa & Kanak-kanak"
+        variant="funrun"
+        onOpen={onOpenImage}
+      />
+      <ProductDetails details={FUN_RUN_DETAILS} />
       <ul className="feature-list package-list" aria-label="Pakej pendaftaran Amal Fun Run">
         <Bullet>Pendaftaran Amal Fun Run</Bullet>
         <Bullet>Baju rasmi peserta</Bullet>
@@ -150,17 +168,28 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         <CatalogueImage src={ASSETS.jubileeMuslimah} alt="Katalog reka bentuk baju Jubli Perak muslimah A-cut, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
+      <div className="product-pair kids-product-pair">
+        <ProductImage src={ASSETS.funRunKidsBoy} alt="Katalog baju kanak-kanak lelaki, paparan depan dan belakang" onOpen={onOpenImage} />
+        <ProductImage src={ASSETS.funRunKidsMuslimah} alt="Katalog baju kanak-kanak muslimah, paparan depan dan belakang" onOpen={onOpenImage} />
+      </div>
       <SizeChart
-        src={ASSETS.funRunSizeChart}
-        alt="Carta saiz baju unisex Jubli Perak dalam ukuran inci"
-        title="Carta Saiz Baju Unisex"
+        src={ASSETS.sizeTshirtPolo}
+        alt="Carta saiz baju T-shirt dan polo dewasa serta kanak-kanak dalam ukuran inci"
+        title="Carta Saiz T-shirt & Polo"
         variant="jubilee"
         onOpen={onOpenImage}
       />
       <SizeChart
-        src={ASSETS.jubileeMuslimahSizeChart}
-        alt="Carta saiz baju muslimah Jubli Perak dalam ukuran inci"
-        title="Carta Saiz Baju Muslimah"
+        src={ASSETS.sizeLongSleeve}
+        alt="Carta saiz baju lengan panjang dewasa dalam ukuran inci"
+        title="Carta Saiz Lengan Panjang"
+        variant="jubilee"
+        onOpen={onOpenImage}
+      />
+      <SizeChart
+        src={ASSETS.sizeMuslimah}
+        alt="Carta saiz baju muslimah dewasa dan kanak-kanak dalam ukuran inci"
+        title="Carta Saiz Muslimah Dewasa & Kanak-kanak"
         variant="jubilee"
         onOpen={onOpenImage}
       />

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-brand">
           <img src={ASSETS.anniversaryLogo} alt="Logo 25 Tahun Yayasan Amal Malaysia" />
           <h2>Yayasan Amal Malaysia</h2>
-          <p>Festival Labohan Dagang @25 tahun</p>
+          <p>Karnival Labohan Dagang @25 tahun</p>
           <p><Calendar size={18} /> {EVENT.dateLabel}</p>
           <p><MapPin size={18} /> Kg. Labohan Dagang, Selangor</p>
         </div>
