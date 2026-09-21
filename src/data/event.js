@@ -31,7 +31,7 @@ export const ASSETS = {
   sizeChartMuslimah: asset('size-chart-muslimah-latest.jpeg'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
-  jubileeLong: asset('jubilee-adult-long-sleeve-latest.jpeg'),
+  jubileeLong: asset('jubilee-polo-long-sleeve-latest.jpeg'),
   jubileeMuslimah: asset('jubilee-muslimah-acut-catalogue.jpeg'),
   jubileeKidsPolo: asset('jubilee-kids-polo-latest.jpg'),
   jubileeKidsMuslimah: asset('jubilee-kids-muslimah-latest.png'),
