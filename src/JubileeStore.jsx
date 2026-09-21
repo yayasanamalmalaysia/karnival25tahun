@@ -18,7 +18,7 @@ export default function JubileeStore() {
       <a className="skip-link" href="#main-content">Langkau ke kandungan</a>
       <header className="site-header">
         <div className="shell header-inner jubilee-store-header">
-          <a className="brand" href="../" aria-label="Kembali ke halaman Festival dan Fun Run">
+          <a className="brand" href="../" aria-label="Kembali ke halaman Karnival dan Fun Run">
             <img src={ASSETS.logo} alt="Logo rasmi Yayasan Amal Malaysia" />
             <span>Yayasan Amal<br />Malaysia</span>
           </a>

@@ -11,7 +11,7 @@ export default function AnniversaryStory() {
             kemanusiaan, kebajikan dan pembangunan komuniti.
           </p>
           <p>
-            Festival Labohan Dagang menghimpunkan warga AMAL, sukarelawan, penyumbang, rakan strategik
+            Karnival Labohan Dagang menghimpunkan warga AMAL, sukarelawan, penyumbang, rakan strategik
             dan masyarakat untuk bersama-sama meraikan perjalanan 25 tahun ini.
           </p>
         </div>

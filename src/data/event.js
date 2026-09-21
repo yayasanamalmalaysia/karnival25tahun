@@ -6,8 +6,8 @@ const asset = (name) => {
 export const BCL_SCRIPT_URL = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
 
 export const EVENT = {
-  title: 'Festival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
-  shortTitle: 'Festival Labohan Dagang',
+  title: 'Karnival Labohan Dagang @25 tahun Yayasan Amal Malaysia',
+  shortTitle: 'Karnival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
   registrationCloseLabel: '1 Oktober 2026',
