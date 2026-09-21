@@ -168,6 +168,10 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         </div>
       </div>
       <figure className="wearing-mockup wearing-mockup-jubilee jubilee-catalogue">
+        <CatalogueImage src={ASSETS.jubileeLongRoundneck} alt="Katalog reka bentuk baju Jubli Perak long sleeve roundneck, paparan depan dan belakang" onOpen={onOpenImage} />
+        <figcaption>Baju long sleeve roundneck • Paparan depan & belakang</figcaption>
+      </figure>
+      <figure className="wearing-mockup wearing-mockup-jubilee jubilee-catalogue">
         <CatalogueImage src={ASSETS.jubileeMuslimah} alt="Katalog reka bentuk baju Jubli Perak muslimah A-cut, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
