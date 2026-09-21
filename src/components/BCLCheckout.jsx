@@ -71,32 +71,36 @@ const selectorItems = [
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
 ]
 
-export default function BCLCheckout({ selected, onSelect }) {
+export default function BCLCheckout({ selected, onSelect, registrationIds = ['funrun', 'shirt'] }) {
+  const visibleItems = selectorItems.filter(([id]) => registrationIds.includes(id))
+  const showSelector = visibleItems.length > 1
+  const isFunRun = selected === 'funrun'
+
   return (
     <section className="section checkout-section" id="checkout" aria-labelledby="checkout-title">
       <div className="shell">
         <div className="section-heading centered">
-          <span className="section-kicker">Daftar Awal Sekarang</span>
-          <h2 id="checkout-title">Lengkapkan Pendaftaran</h2>
-          <p>Pilih aktiviti dan lengkapkan pendaftaran tanpa meninggalkan halaman ini.</p>
+          <span className="section-kicker">{isFunRun ? 'Daftar Awal Sekarang' : 'Tempahan Rasmi'}</span>
+          <h2 id="checkout-title">{isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : 'Lengkapkan Tempahan Baju Jubli Perak'}</h2>
+          <p>{isFunRun ? 'Lengkapkan pendaftaran Amal Fun Run tanpa meninggalkan halaman ini.' : 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.'}</p>
         </div>
-        <div className="checkout-layout">
-          <aside className="checkout-selector" aria-label="Pilih aktiviti untuk pendaftaran">
+        <div className={showSelector ? 'checkout-layout' : 'checkout-layout checkout-layout-single'}>
+          {showSelector && <aside className="checkout-selector" aria-label="Pilih aktiviti untuk pendaftaran">
             <p className="selector-title">Pilih aktiviti</p>
-            {selectorItems.map(([id, label, ItemIcon]) => (
+            {visibleItems.map(([id, label, ItemIcon]) => (
               <button
                 className={selected === id ? 'selector-item is-selected' : 'selector-item'}
                 type="button"
                 key={id}
                 aria-pressed={selected === id}
-                onClick={() => onSelect(id, false)}
+                onClick={() => onSelect?.(id, false)}
               >
                 <span className="selector-icon"><ItemIcon /></span>
                 <span>{label}</span>
                 {selected === id && <Check className="selector-check" size={20} />}
               </button>
             ))}
-          </aside>
+          </aside>}
           <div className="checkout-content">
             <BCLForm selected={selected} />
           </div>

@@ -55,17 +55,25 @@ function SizeChart({ src, alt, title, variant, onOpen }) {
   )
 }
 
-const SHIRT_DETAILS = [
+const FUN_RUN_DETAILS = [
+  ['Yuran pendaftaran', 'RM50'],
+  ['Termasuk', 'Baju rasmi peserta & medal'],
+  ['Material', 'Sublimation Diamond'],
+  ['Ketebalan', '180gsm'],
+  ['Saiz baju', 'Dalam borang pendaftaran'],
+]
+
+const JUBILEE_SHIRT_DETAILS = [
   ['Material', 'Sublimation Diamond'],
   ['Ketebalan', '180gsm'],
   ['Harga', 'RM30'],
   ['Saiz & kuantiti', 'Dalam borang tempahan'],
 ]
 
-function ProductDetails() {
+function ProductDetails({ details = FUN_RUN_DETAILS }) {
   return (
     <dl className="product-fields" aria-label="Maklumat baju">
-      {SHIRT_DETAILS.map(([label, value]) => (
+      {details.map(([label, value]) => (
         <div key={label}><dt>{label}</dt><dd>{value}</dd></div>
       ))}
     </dl>
@@ -98,17 +106,30 @@ export function FunRunCard({ onSelect, onOpenImage }) {
         <CatalogueImage src={ASSETS.funRunMuslimah} alt="Katalog reka bentuk baju muslimah Amal Fun Run, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah • Paparan depan & belakang</figcaption>
       </figure>
+      <div className="product-stage merchandise-stage">
+        <div className="product-pair">
+          <ProductImage src={ASSETS.funRunKidsShort} alt="Katalog terkini baju Amal Fun Run kanak-kanak lengan pendek, paparan depan dan belakang" onOpen={onOpenImage} />
+          <ProductImage src={ASSETS.funRunKidsMuslimah} alt="Katalog terkini baju Amal Fun Run kanak-kanak muslimah lengan panjang, paparan depan dan belakang" onOpen={onOpenImage} />
+        </div>
+      </div>
       <SizeChart
-        src={ASSETS.funRunSizeChart}
-        alt="Carta saiz Amal Fun Run untuk baju lengan pendek dalam ukuran inci"
-        title="Carta Saiz Baju Unisex"
+        src={ASSETS.sizeChartTshirtPolo}
+        alt="Carta saiz terkini baju T-shirt dan polo untuk dewasa serta kanak-kanak"
+        title="Carta Saiz T-shirt & Polo"
         variant="funrun"
         onOpen={onOpenImage}
       />
       <SizeChart
-        src={ASSETS.jubileeMuslimahSizeChart}
-        alt="Carta saiz baju muslimah Amal Fun Run dalam ukuran inci"
-        title="Carta Saiz Baju Muslimah"
+        src={ASSETS.sizeChartLongSleeve}
+        alt="Carta saiz terkini baju lengan panjang untuk dewasa"
+        title="Carta Saiz Lengan Panjang"
+        variant="funrun"
+        onOpen={onOpenImage}
+      />
+      <SizeChart
+        src={ASSETS.sizeChartMuslimah}
+        alt="Carta saiz terkini baju muslimah untuk dewasa dan kanak-kanak"
+        title="Carta Saiz Muslimah Dewasa & Kanak-kanak"
         variant="funrun"
         onOpen={onOpenImage}
       />
@@ -150,21 +171,34 @@ export function JubileeShirtCard({ onSelect, onOpenImage }) {
         <CatalogueImage src={ASSETS.jubileeMuslimah} alt="Katalog reka bentuk baju Jubli Perak muslimah A-cut, paparan depan dan belakang" onOpen={onOpenImage} />
         <figcaption>Baju muslimah A-cut • Paparan depan & belakang</figcaption>
       </figure>
+      <div className="product-stage merchandise-stage">
+        <div className="product-pair">
+          <ProductImage src={ASSETS.jubileeKidsPolo} alt="Katalog terkini baju Jubli Perak kanak-kanak polo, paparan depan dan belakang" onOpen={onOpenImage} />
+          <ProductImage src={ASSETS.jubileeKidsMuslimah} alt="Katalog terkini baju Jubli Perak kanak-kanak muslimah, paparan depan dan belakang" onOpen={onOpenImage} />
+        </div>
+      </div>
       <SizeChart
-        src={ASSETS.funRunSizeChart}
-        alt="Carta saiz baju unisex Jubli Perak dalam ukuran inci"
-        title="Carta Saiz Baju Unisex"
+        src={ASSETS.sizeChartTshirtPolo}
+        alt="Carta saiz terkini baju T-shirt dan polo untuk dewasa serta kanak-kanak"
+        title="Carta Saiz T-shirt & Polo"
         variant="jubilee"
         onOpen={onOpenImage}
       />
       <SizeChart
-        src={ASSETS.jubileeMuslimahSizeChart}
-        alt="Carta saiz baju muslimah Jubli Perak dalam ukuran inci"
-        title="Carta Saiz Baju Muslimah"
+        src={ASSETS.sizeChartLongSleeve}
+        alt="Carta saiz terkini baju lengan panjang untuk dewasa"
+        title="Carta Saiz Lengan Panjang"
         variant="jubilee"
         onOpen={onOpenImage}
       />
-      <ProductDetails />
+      <SizeChart
+        src={ASSETS.sizeChartMuslimah}
+        alt="Carta saiz terkini baju muslimah untuk dewasa dan kanak-kanak"
+        title="Carta Saiz Muslimah Dewasa & Kanak-kanak"
+        variant="jubilee"
+        onOpen={onOpenImage}
+      />
+      <ProductDetails details={JUBILEE_SHIRT_DETAILS} />
       <button className="button button-gold card-button" type="button" onClick={() => onSelect('shirt')}>
         Tempah Baju Jubli Perak <ArrowRight size={20} />
       </button>
@@ -180,17 +214,16 @@ export default function RegistrationCards({ onSelect }) {
       <div className="shell">
         <div className="section-heading registration-heading">
           <span className="section-kicker">Sertai Acara Paling Meriah Tahun Ini</span>
-          <h2>Pilih Penyertaan Anda</h2>
+          <h2>Daftar Amal Fun Run</h2>
           <p>Jom jadi sebahagian daripada sejarah 25 tahun AMAL.</p>
         </div>
         <div className="registration-deadline" role="note">
           <Calendar size={22} />
-          <span>Tarikh tutup 1st batch tempahan baju</span>
-          <strong>{EVENT.shirtFirstBatchCloseLabel}</strong>
+          <span>Tarikh tutup pendaftaran Fun Run</span>
+          <strong>{EVENT.registrationCloseLabel}</strong>
         </div>
-        <div className="registration-grid">
+        <div className="registration-grid registration-grid-single">
           <FunRunCard onSelect={onSelect} onOpenImage={setActiveImage} />
-          <JubileeShirtCard onSelect={onSelect} onOpenImage={setActiveImage} />
         </div>
         <figure className="funrun-route-panel" id="laluan-fun-run">
           <a href={ASSETS.funRunRoute} target="_blank" rel="noreferrer" aria-label="Buka peta laluan Amal Fun Run dalam saiz penuh">
@@ -209,9 +242,6 @@ export default function RegistrationCards({ onSelect }) {
             <span className="route-draft-note">Laluan tertakluk kepada pengesahan akhir penganjur.</span>
           </figcaption>
         </figure>
-        <p className="product-distinction" aria-label="Kedua-dua baju ialah design yang berasingan">
-          <span>Baju Fun Run</span><strong>≠</strong><span>Baju Jubli Perak</span>
-        </p>
       </div>
       <ImageLightbox image={activeImage} onClose={() => setActiveImage(null)} />
     </section>

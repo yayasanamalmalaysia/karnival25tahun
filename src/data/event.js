@@ -1,4 +1,7 @@
-const asset = (name) => `${import.meta.env.BASE_URL}assets/${name}`
+const asset = (name) => {
+  const isJubileeStore = window.location.pathname.includes('/baju-jubli-perak/')
+  return `${isJubileeStore ? '../' : './'}assets/${name}`
+}
 
 export const BCL_SCRIPT_URL = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
 
@@ -7,7 +10,7 @@ export const EVENT = {
   shortTitle: 'Festival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
-  shirtFirstBatchCloseLabel: '20 September 2026',
+  registrationCloseLabel: '1 Oktober 2026',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
   mapUrl: 'https://maps.app.goo.gl/T72UUvqh65MFJPvp8',
@@ -21,12 +24,17 @@ export const ASSETS = {
   funRunLong: asset('funrun-long-catalogue.jpeg'),
   funRunShort: asset('funrun-short-catalogue.jpeg'),
   funRunMuslimah: asset('funrun-muslimah-catalogue.jpeg'),
-  funRunSizeChart: asset('funrun-size-chart.jpeg'),
+  funRunKidsShort: asset('funrun-kids-short-latest.jpeg'),
+  funRunKidsMuslimah: asset('funrun-kids-muslimah-latest.jpg'),
+  sizeChartTshirtPolo: asset('size-chart-tshirt-polo-latest.jpeg'),
+  sizeChartLongSleeve: asset('size-chart-long-sleeve-latest.jpeg'),
+  sizeChartMuslimah: asset('size-chart-muslimah-latest.jpeg'),
   funRunRoute: asset('funrun-route-3d-draft.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
-  jubileeLong: asset('jubilee-polo-long-catalogue.jpeg'),
+  jubileeLong: asset('jubilee-adult-long-sleeve-latest.jpeg'),
   jubileeMuslimah: asset('jubilee-muslimah-acut-catalogue.jpeg'),
-  jubileeMuslimahSizeChart: asset('jubilee-muslimah-size-chart.jpeg'),
+  jubileeKidsPolo: asset('jubilee-kids-polo-latest.jpg'),
+  jubileeKidsMuslimah: asset('jubilee-kids-muslimah-latest.png'),
   festivalKids: asset('festival-kids-running-syariah-final.png'),
   festivalLandscape: asset('festival-landscape-syariah-final.png'),
 }
@@ -68,9 +76,9 @@ export const FAQS = [
       'Bagi Amal Fun Run, yuran pendaftaran RM50 termasuk baju aktiviti dan medal.',
   },
   {
-    question: 'Adakah Baju Jubli Perak sama dengan baju Fun Run?',
+    question: 'Di manakah saya boleh tempah Baju Jubli Perak?',
     answer:
-      'Tidak. Baju Jubli Perak ialah merchandise rasmi sambutan 25 Tahun dan merupakan tempahan berasingan.',
+      'Baju Jubli Perak mempunyai halaman tempahan khas dan tidak termasuk dalam paparan pendaftaran Fun Run.',
   },
   {
     question: 'Bolehkah saya menyertai lebih daripada satu aktiviti?',

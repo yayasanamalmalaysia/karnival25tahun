@@ -1,7 +1,7 @@
 import { EVENT } from '../data/event'
 import { Calendar, Info, MapPin, Stage } from './Icons'
 
-const pending = ['Waze', 'Tentatif', 'Waktu mula', 'Parking', 'Pegawai untuk dihubungi']
+const pending = ['Tentatif', 'Waktu mula']
 
 export default function EventInfo() {
   return (
@@ -21,6 +21,10 @@ export default function EventInfo() {
           {pending.map((item) => (
             <div key={item}><span><Info size={18} /> {item}</span><strong>Akan dikemas kini</strong></div>
           ))}
+          <div>
+            <span><Info size={18} /> Pegawai untuk dihubungi</span>
+            <a className="event-whatsapp" href="https://wa.me/601135826720" target="_blank" rel="noreferrer">Hubungi melalui WhatsApp <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
       </div>
     </section>

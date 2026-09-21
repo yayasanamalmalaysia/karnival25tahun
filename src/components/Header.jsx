@@ -3,12 +3,12 @@ import { ASSETS } from '../data/event'
 import { ArrowRight, Close, Menu } from './Icons'
 
 const items = [
-  ['Utama', '#utama'],
-  ['Aktiviti', '#aktiviti'],
-  ['Fun Run', 'funrun'],
-  ['Baju Jubli Perak', 'shirt'],
-  ['Lokasi', '#lokasi'],
-  ['FAQ', '#faq'],
+  { label: 'Utama', target: '#utama' },
+  { label: 'Aktiviti', target: '#aktiviti' },
+  { label: 'Fun Run', target: 'funrun' },
+  { label: 'Baju Jubli Perak', href: './baju-jubli-perak/' },
+  { label: 'Lokasi', target: '#lokasi' },
+  { label: 'FAQ', target: '#faq' },
 ]
 
 export default function Header({ onRegister }) {
@@ -43,8 +43,10 @@ export default function Header({ onRegister }) {
         </button>
 
         <nav id="main-navigation" className={open ? 'main-nav is-open' : 'main-nav'} aria-label="Navigasi utama">
-          {items.map(([label, target]) => (
-            <button key={label} type="button" onClick={() => handle(target)}>{label}</button>
+          {items.map((item) => item.href ? (
+            <a key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>
+          ) : (
+            <button key={item.label} type="button" onClick={() => handle(item.target)}>{item.label}</button>
           ))}
         </nav>
 

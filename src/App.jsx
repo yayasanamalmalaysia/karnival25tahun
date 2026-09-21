@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Countdown from './components/Countdown'
@@ -13,15 +12,10 @@ import Footer from './components/Footer'
 import MobileStickyCTA from './components/MobileStickyCTA'
 
 export default function App() {
-  const [selected, setSelected] = useState('funrun')
-
-  const selectRegistration = (id = 'selector', shouldScroll = true) => {
-    if (id !== 'selector') setSelected(id)
-    if (shouldScroll) {
-      window.requestAnimationFrame(() => {
-        document.querySelector(id === 'selector' ? '#pendaftaran' : '#checkout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      })
-    }
+  const selectRegistration = (id = 'selector') => {
+    window.requestAnimationFrame(() => {
+      document.querySelector(id === 'selector' ? '#pendaftaran' : '#checkout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    })
   }
 
   return (
@@ -33,7 +27,7 @@ export default function App() {
         <Countdown />
         <RegistrationCards onSelect={selectRegistration} />
         <CarnivalActivities />
-        <BCLCheckout selected={selected} onSelect={selectRegistration} />
+        <BCLCheckout selected="funrun" onSelect={selectRegistration} registrationIds={['funrun']} />
         <AnniversaryStory />
         <EventInfo />
         <Organizer />

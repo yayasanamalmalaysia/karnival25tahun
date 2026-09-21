@@ -1,7 +1,14 @@
 import { ASSETS, EVENT } from '../data/event'
 import { Calendar, MapPin } from './Icons'
 
-const footerLinks = ['Tentang Program', 'Aktiviti', 'Pendaftaran', 'Hubungi Kami', 'Polisi Privasi', 'Terma & Syarat']
+const footerLinks = [
+  'Tentang Program',
+  'Aktiviti',
+  { label: 'Tempahan Baju Jubli Perak', href: './baju-jubli-perak/' },
+  { label: 'Hubungi Kami', href: 'https://wa.me/601135826720' },
+  'Polisi Privasi',
+  'Terma & Syarat',
+]
 
 export default function Footer() {
   return (
@@ -15,8 +22,10 @@ export default function Footer() {
           <p><MapPin size={18} /> Kg. Labohan Dagang, Selangor</p>
         </div>
         <nav className="footer-nav" aria-label="Pautan footer">
-          {footerLinks.map((link) => <span key={link}>{link}</span>)}
-          <small>Pautan rasmi akan disambungkan selepas URL disahkan.</small>
+          {footerLinks.map((link) => typeof link === 'string'
+            ? <span key={link}>{link}</span>
+            : <a key={link.label} href={link.href}>{link.label}</a>)}
+          <small>Pautan tempahan Baju Jubli Perak disediakan secara berasingan.</small>
         </nav>
       </div>
       <div className="footer-swoop" aria-hidden="true" />
