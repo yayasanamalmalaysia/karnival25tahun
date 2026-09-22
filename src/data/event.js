@@ -29,7 +29,7 @@ export const ASSETS = {
   sizeChartTshirtPolo: asset('size-chart-tshirt-polo-latest.jpeg'),
   sizeChartLongSleeve: asset('size-chart-long-sleeve-latest.jpeg'),
   sizeChartMuslimah: asset('size-chart-muslimah-latest.jpeg'),
-  funRunRoute: asset('funrun-route-3d-draft.png'),
+  funRunRoute: asset('funrun-route-3km-5km-20260922.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
   jubileeLong: asset('jubilee-polo-long-sleeve-latest.jpeg'),
   jubileeLongRoundneck: asset('jubilee-adult-long-sleeve-latest.jpeg'),
@@ -61,13 +61,14 @@ export const REGISTRATIONS = {
 
 export const CARNIVAL_ACTIVITIES = [
   ['run', 'Amal Fun Run', 'Pendaftaran dibuka'],
-  ['child', 'Aktiviti Kanak-kanak', 'Akan diumumkan'],
-  ['family', 'Aktiviti Keluarga', 'Akan diumumkan'],
-  ['booth', 'Booth Jualan', 'Akan diumumkan'],
-  ['exhibition', 'Pameran', 'Akan diumumkan'],
-  ['stage', 'Program Pentas', 'Akan diumumkan'],
-  ['community', 'Aktiviti Komuniti', 'Akan diumumkan'],
-  ['food', 'Makanan & Vendor', 'Akan diumumkan'],
+  ['child', 'Aktiviti Kanak-kanak'],
+  ['family', 'Aktiviti Keluarga'],
+  ['booth', 'Booth Jualan'],
+  ['exhibition', 'Pameran'],
+  ['antiqueCar', 'Pameran Kereta Antik'],
+  ['stage', 'Program Pentas'],
+  ['community', 'Aktiviti Komuniti'],
+  ['food', 'Makanan & Vendor'],
 ]
 
 export const FAQS = [
@@ -80,6 +81,10 @@ export const FAQS = [
     question: 'Di manakah saya boleh tempah Baju Jubli Perak?',
     answer:
       'Baju Jubli Perak mempunyai halaman tempahan khas dan tidak termasuk dalam paparan pendaftaran Fun Run.',
+    link: {
+      href: 'https://amalmalaysia.org.my/karnival25tahun/baju-jubli-perak/',
+      label: 'Tempah Baju Jubli Perak',
+    },
   },
   {
     question: 'Bolehkah saya menyertai lebih daripada satu aktiviti?',

@@ -79,6 +79,9 @@ export const Exhibition = (props) => (
 export const Food = (props) => (
   <Icon {...props}><path d="M5 4v7M8 4v7M5 8h3M6.5 11v9M16 4v16M16 4c3 2 3 7 0 9" {...stroke} /></Icon>
 )
+export const AntiqueCar = (props) => (
+  <Icon {...props}><path d="m5 16 1.5-5h11L19 16M4 16h16v3H4zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 11l2-4h4l2 4" {...stroke} /></Icon>
+)
 
 export const ACTIVITY_ICONS = {
   run: Run,
@@ -90,5 +93,6 @@ export const ACTIVITY_ICONS = {
   stage: Stage,
   community: Community,
   exhibition: Exhibition,
+  antiqueCar: AntiqueCar,
   food: Food,
 }

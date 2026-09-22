@@ -10,7 +10,10 @@ export default function FAQ() {
           {FAQS.map((item, index) => (
             <details key={item.question} open={index === 0}>
               <summary>{item.question}<ChevronDown className="faq-chevron" /></summary>
-              <p>{item.answer}</p>
+              <p>
+                {item.answer}
+                {item.link && <> <a href={item.link.href}>{item.link.label}</a></>}
+              </p>
             </details>
           ))}
         </div>

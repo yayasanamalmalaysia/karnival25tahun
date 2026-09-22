@@ -20,7 +20,7 @@ export default function CarnivalActivities() {
               <article className={status === 'Pendaftaran dibuka' ? 'activity-item is-open' : 'activity-item'} role="listitem" key={title}>
                 <ActivityIcon size={30} />
                 <h3>{title}</h3>
-                <p>{status}</p>
+                {status && <p>{status}</p>}
               </article>
             )
           })}

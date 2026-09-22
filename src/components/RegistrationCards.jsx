@@ -234,15 +234,15 @@ export default function RegistrationCards({ onSelect }) {
             <img
               loading="lazy"
               src={ASSETS.funRunRoute}
-              alt="Peta 3D draf laluan Amal Fun Run, anggaran 5 kilometer, bermula dan tamat di HQ Yayasan Amal Malaysia"
+              alt="Peta laluan Amal Fun Run dengan dua kategori: 3 kilometer dan 5 kilometer, bermula dan tamat di HQ Yayasan Amal Malaysia"
             />
           </a>
           <figcaption>
             <div>
               <span className="route-kicker">Laluan Fun Run</span>
-              <strong>Anggaran 5 KM</strong>
+              <strong>2 Kategori: 3 KM &amp; 5 KM</strong>
             </div>
-            <p>Start dan finish di HQ Yayasan Amal Malaysia. Tekan peta untuk paparan penuh.</p>
+            <p>Pilih laluan 3 KM atau 5 KM. Start dan finish di HQ Yayasan Amal Malaysia. Tekan peta untuk paparan penuh.</p>
             <span className="route-draft-note">Laluan tertakluk kepada pengesahan akhir penganjur.</span>
           </figcaption>
         </figure>

@@ -250,7 +250,7 @@
   .product-distinction strong { color: var(--coral); font-size: 1.35rem; }
 
   .funrun-route-panel { align-items: stretch; background: var(--green-900); border: 7px solid var(--white); border-radius: 36px; box-shadow: var(--shadow-poster); display: grid; grid-template-columns: 1.35fr .65fr; margin-top: 92px; overflow: hidden; position: relative; }
-  .funrun-route-panel::before { background: var(--sun); border-radius: 50%; content: "5 KM"; color: var(--green-950); display: grid; font-family: var(--display); font-size: 1rem; height: 74px; place-items: center; position: absolute; right: 29%; top: 18px; transform: rotate(8deg); width: 74px; z-index: 3; }
+  .funrun-route-panel::before { background: var(--sun); border-radius: 50%; content: "3 & 5 KM"; color: var(--green-950); display: grid; font-family: var(--display); font-size: .82rem; height: 74px; place-items: center; position: absolute; right: 29%; top: 18px; transform: rotate(8deg); width: 74px; z-index: 3; }
   .funrun-route-panel > a { min-height: 360px; overflow: hidden; }
   .funrun-route-panel > a img { height: 100%; object-fit: cover; transition: transform .5s ease; width: 100%; }
   .funrun-route-panel > a:hover img { transform: scale(1.025); }
@@ -353,6 +353,7 @@
   .faq-list summary { align-items: center; color: var(--green-900); cursor: pointer; display: flex; font-family: var(--display); font-size: .98rem; justify-content: space-between; list-style: none; padding: 20px 22px; }
   .faq-list summary::-webkit-details-marker { display: none; }
   .faq-list details p { color: var(--ink-soft); font-size: .88rem; padding: 0 22px 22px; }
+  .faq-list details p a { color: var(--green-700); font-weight: 900; text-decoration: underline; text-underline-offset: 3px; }
   .faq-chevron { transition: transform .2s ease; }
   .faq-list details[open] .faq-chevron { transform: rotate(180deg); }
 
