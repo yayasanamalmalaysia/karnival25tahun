@@ -105,11 +105,21 @@
   .confetti-7 { left: 88%; top: 26%; transform: rotate(18deg); }
   .confetti-8 { left: 95%; top: 76%; transform: rotate(-45deg); }
 
-  .festival-plane { left: -210px; position: absolute; top: 105px; width: 180px; z-index: 5; }
+  .festival-plane { left: -260px; pointer-events: none; position: absolute; top: 105px; width: 230px; z-index: 5; }
   .festival-plane svg { overflow: visible; }
-  .festival-plane .plane-body { fill: #fff; stroke: var(--green-900); stroke-linejoin: round; stroke-width: 3; }
-  .festival-plane .plane-accent { fill: var(--coral); }
-  .festival-plane circle { fill: var(--sky); stroke: var(--green-900); stroke-width: 2; }
+  .festival-plane .plane-body { fill: #fff; stroke: #55777e; stroke-linejoin: round; stroke-width: 1.4; }
+  .festival-plane .plane-wing { fill: #e1ebed; stroke: #55777e; stroke-linejoin: round; stroke-width: 1.3; }
+  .festival-plane .plane-wingtip { fill: none; stroke: var(--green-900); stroke-linecap: round; stroke-width: 2; }
+  .festival-plane .plane-tail { fill: #e1ebed; stroke: #55777e; stroke-width: 1.2; }
+  .festival-plane .plane-engine { fill: #f7fafb; stroke: #55777e; stroke-width: 1.2; }
+  .festival-plane .plane-intake { fill: #243d45; }
+  .festival-plane .plane-belly { fill: #dce8eb; }
+  .festival-plane .plane-fin { fill: var(--green-900); stroke: #55777e; stroke-width: 1; }
+  .festival-plane .plane-fin-mark { fill: var(--coral); }
+  .festival-plane .plane-stripe { fill: none; stroke: var(--coral); stroke-width: 1.6; }
+  .festival-plane .plane-cockpit { fill: #203b46; }
+  .festival-plane .plane-windows { fill: none; stroke: #345560; stroke-dasharray: 1 5; stroke-linecap: round; stroke-width: 1.7; }
+  .festival-plane .plane-door { fill: none; stroke: #6c8a90; stroke-width: 1; }
   .festival-plane .plane-trail { fill: none; stroke: rgba(255, 255, 255, .85); stroke-dasharray: 6 9; stroke-linecap: round; stroke-width: 4; }
 
   .floating-badges { inset: 0; pointer-events: none; position: absolute; z-index: 8; }
@@ -462,7 +472,7 @@
     .badge-anniversary { right: -1%; top: -2%; width: 81px; }
     .badge-shirt { left: auto; right: -2%; top: 31%; width: 82px; }
     .badge-join { display: none; }
-    .festival-plane { top: 95px; transform: scale(.72); }
+    .festival-plane { top: 95px; width: 170px; }
     .hero-wave { height: 36px; }
     .countdown { border-radius: 14px; margin-top: -46px; }
     .countdown-heading { padding: 20px 18px 17px; }
