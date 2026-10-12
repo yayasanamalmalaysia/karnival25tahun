@@ -5,8 +5,8 @@ const footerLinks = [
   'Tentang Program',
   'Aktiviti',
   { label: 'Tempahan Baju Jubli Perak', href: './baju-jubli-perak/' },
-  { label: 'Pertanyaan Fun Run — 017-678 8930', href: 'https://wa.me/60176788930' },
-  { label: 'Pertanyaan Vendor — 011-3582 6720', href: 'https://wa.me/601135826720' },
+  { label: 'Pertanyaan Fun Run', href: 'https://wa.me/60176788930' },
+  { label: 'Pertanyaan Vendor', href: 'https://wa.me/601135826720' },
   'Polisi Privasi',
   'Terma & Syarat',
 ]
