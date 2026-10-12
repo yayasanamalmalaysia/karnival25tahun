@@ -22,8 +22,12 @@ export default function EventInfo() {
             <div key={item}><span><Info size={18} /> {item}</span><strong>Akan dikemas kini</strong></div>
           ))}
           <div>
-            <span><Info size={18} /> Pegawai untuk dihubungi</span>
-            <a className="event-whatsapp" href="https://wa.me/601135826720" target="_blank" rel="noreferrer">Hubungi melalui WhatsApp <span aria-hidden="true">↗</span></a>
+            <span><Info size={18} /> Pertanyaan Fun Run</span>
+            <a className="event-whatsapp" href="https://wa.me/60176788930" target="_blank" rel="noreferrer">017-678 8930 <span aria-hidden="true">↗</span></a>
+          </div>
+          <div>
+            <span><Info size={18} /> Pertanyaan Vendor</span>
+            <a className="event-whatsapp" href="https://wa.me/601135826720" target="_blank" rel="noreferrer">011-3582 6720 <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </div>
