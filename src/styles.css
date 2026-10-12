@@ -554,3 +554,6 @@
     .festival-plane { display: none; }
   }
 }
+
+.footer-nav a { color: var(--sun); font-weight: 800; border-bottom: 1px solid rgba(255,255,255,.14); padding: 10px 0; }
+.pending-info .event-whatsapp { color: var(--green-800); font-size: .68rem; font-weight: 800; }
