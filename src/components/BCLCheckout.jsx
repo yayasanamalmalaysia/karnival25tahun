@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useEffect } from 'react'
 import { BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
 import { Check, Lock, Run, Shirt } from './Icons'
 
 const formCopy = {
   funrun: {
     title: 'Pendaftaran Amal Fun Run',
-    strong: 'Yuran pendaftaran RM50 termasuk baju dan medal',
-    detail: 'Sediakan maklumat peserta dan pilihan saiz baju untuk melengkapkan pendaftaran.',
+    strong: 'Pendaftaran serendah RM15 seorang',
+    detail: 'Pilih pakej larian, kategori 3KM atau 5KM dan maklumat peserta dalam borang rasmi BCL.',
     Icon: Run,
   },
   shirt: {
@@ -20,27 +20,16 @@ const formCopy = {
 function BCLForm({ selected }) {
   const current = formCopy[selected]
   const ItemIcon = current.Icon
-  const formRef = useRef(null)
 
   useEffect(() => {
-    const form = formRef.current
-    if (!form) return undefined
-
-    // BCL reads #bcl-payment-form when its script executes. Recreate that
-    // script on every selection so the active product form replaces the prior iframe.
-    form.replaceChildren()
-    const loading = document.createElement('p')
-    loading.className = 'bcl-loading'
-    loading.textContent = 'Memuatkan borang BCL…'
-    form.appendChild(loading)
-
+    // Each route has one BCL container. Keep the script across React StrictMode
+    // effect re-runs so the provider's iframe is never cleared or duplicated.
+    if (document.querySelector('script[data-karnival-bcl]')) return
     const script = document.createElement('script')
     script.src = BCL_SCRIPT_URL
     script.async = true
     script.dataset.karnivalBcl = selected
     document.body.appendChild(script)
-
-    return () => script.remove()
   }, [selected])
 
   return (
@@ -56,18 +45,18 @@ function BCLForm({ selected }) {
       </div>
       <div
         id="bcl-payment-form"
-        ref={formRef}
         data-url={REGISTRATIONS[selected].embedUrl}
         aria-label={`Borang BCL untuk ${current.title}`}
       >
         <p className="bcl-loading">Memuatkan borang BCL…</p>
       </div>
+      {selected === 'funrun' && <p className="bcl-fallback">Borang tidak dipaparkan? <a href="https://yayasanamalmalaysia.bcl.my/event/amalfunrun" target="_blank" rel="noopener noreferrer">Buka borang Amal Fun Run terus di BCL</a>.</p>}
     </div>
   )
 }
 
 const selectorItems = [
-  ['funrun', 'Amal Fun Run — RM50', Run],
+  ['funrun', 'Amal Fun Run — serendah RM15', Run],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
 ]
 

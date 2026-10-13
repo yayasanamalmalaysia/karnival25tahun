@@ -57,7 +57,7 @@ export function FloatingBadges() {
   return (
     <div className="floating-badges" aria-hidden="true">
       <div className="float-badge badge-anniversary"><strong>25</strong><span>Tahun</span></div>
-      <div className="float-badge badge-shirt"><strong>RM50</strong><span>Pakej Lengkap</span></div>
+      <div className="float-badge badge-shirt"><strong>RM15</strong><span>Serendah</span></div>
       <div className="float-badge badge-join"><strong>Jom</strong><span>Sertai!</span></div>
     </div>
   )

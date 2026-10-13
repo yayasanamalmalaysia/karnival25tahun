@@ -23,7 +23,7 @@ export default function Hero({ onRegister }) {
               <p><MapPin /> <strong>{EVENT.locationShort}</strong></p>
             </div>
             <p className="hero-supporting">Jom raikan 25 tahun legasi, kebersamaan dan kemeriahan bersama pelbagai aktiviti menarik untuk semua.</p>
-            <p className="hero-package"><strong>Amal Fun Run:</strong> RM50 setiap pendaftaran • Baju • Medal</p>
+            <p className="hero-package"><strong>Amal Fun Run:</strong> Pendaftaran serendah RM15 • Pakej dengan baju turut tersedia</p>
             <div className="hero-actions">
               <button className="button button-primary" type="button" onClick={() => onRegister('selector')}>
                 Daftar Aktiviti Sekarang <ArrowRight size={20} />
