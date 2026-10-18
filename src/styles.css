@@ -333,6 +333,9 @@
   .carnival-road::before { border-top: 3px dashed rgba(255, 255, 255, .65); content: ""; left: 0; position: absolute; right: 0; top: 25px; }
 
   .checkout-section { background: radial-gradient(circle at 96% 14%, rgba(255, 201, 40, .22) 0 120px, transparent 122px), var(--cream); padding-top: 120px; }
+  .activity-registration-poster { background: var(--white); border: 7px solid var(--white); border-radius: 30px; box-shadow: var(--shadow-poster); margin: 0 auto 44px; max-width: 1120px; overflow: hidden; }
+  .activity-registration-poster img { height: auto; width: 100%; }
+  .activity-registration-cta { display: flex; margin: -17px auto 46px; width: fit-content; }
   .checkout-layout { align-items: start; display: grid; gap: 24px; grid-template-columns: 320px minmax(0, 1fr); }
   .checkout-layout-single { grid-template-columns: minmax(0, 1fr); margin-inline: auto; max-width: 980px; }
   .checkout-selector { background: var(--green-900); border: 5px solid var(--white); border-radius: 26px; box-shadow: var(--shadow-poster); padding: 20px; position: sticky; top: 18px; }
@@ -567,6 +570,8 @@
     .activity-item:nth-child(3n + 2), .activity-item:nth-child(3n) { transform: none; }
     .carnival-landscape { margin-top: 42px; max-height: 230px; transform: scale(1.18); }
     .checkout-section { padding-top: 88px; }
+    .activity-registration-poster { border-width: 4px; border-radius: 20px; margin-bottom: 28px; }
+    .activity-registration-cta { margin: -8px auto 34px; width: 100%; }
     .checkout-selector { gap: 9px; grid-template-columns: 1fr; padding: 15px; }
     .selector-title, .registration-close-note, .checkout-note { grid-column: 1; }
     .checkout-panel { border-radius: 20px; }

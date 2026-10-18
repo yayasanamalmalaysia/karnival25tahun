@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
-import { Check, Community, Lock, Run, Shirt } from './Icons'
+import { ASSETS, BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
+import { ArrowRight, Check, Community, Lock, Run, Shirt } from './Icons'
 
 const formCopy = {
   activities: {
     title: 'Pendaftaran Aktiviti Program Percuma',
     strong: 'Pilih aktiviti percuma yang ingin disertai',
-    detail: 'Daftar pertandingan mewarna kanak-kanak 7–12 tahun, gubahan sejadah atau menyediakan kerabu.',
+    detail: 'Daftar pertandingan mewarna kanak-kanak 7–12 tahun, gubahan sejadah atau menyediakan masakan kerabu.',
     Icon: Community,
   },
   funrun: {
@@ -99,6 +99,20 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
           <h2 id="checkout-title">{sectionTitle}</h2>
           <p>{sectionDetail}</p>
         </div>
+        {isActivities && (
+          <figure className="activity-registration-poster">
+            <img
+              src={ASSETS.activityRegistrationPoster}
+              alt="Poster Aktiviti Program Percuma: pertandingan mewarna 7 hingga 12 tahun, pertandingan gubahan sejadah dan pertandingan menyediakan masakan kerabu pada 14 November 2026 di Kampung Labohan Dagang"
+              loading="lazy"
+            />
+          </figure>
+        )}
+        {isActivities && (
+          <a className="button button-coral activity-registration-cta" href="#bcl-payment-form">
+            Daftar / Sertai Sekarang <ArrowRight size={20} />
+          </a>
+        )}
         <div className={showSelector ? 'checkout-layout' : 'checkout-layout checkout-layout-single'}>
           {showSelector && <aside className="checkout-selector" aria-label="Pilih aktiviti untuk pendaftaran">
             <p className="selector-title">Pilih aktiviti</p>

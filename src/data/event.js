@@ -30,6 +30,7 @@ export const ASSETS = {
   sizeChartLongSleeve: asset('size-chart-long-sleeve-latest.jpeg'),
   sizeChartMuslimah: asset('size-chart-muslimah-latest.jpeg'),
   funRunRoute: asset('funrun-route-3km-5km-20260922.png'),
+  activityRegistrationPoster: asset('aktiviti-program-percuma-2026.png'),
   jubileePolo: asset('jubilee-polo-short-catalogue.jpeg'),
   jubileeLong: asset('jubilee-polo-long-sleeve-latest.jpeg'),
   jubileeLongRoundneck: asset('jubilee-adult-long-sleeve-latest.jpeg'),
