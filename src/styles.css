@@ -336,6 +336,75 @@
   .activity-registration-poster { background: var(--white); border: 7px solid var(--white); border-radius: 30px; box-shadow: var(--shadow-poster); margin: 0 auto 44px; max-width: 1120px; overflow: hidden; }
   .activity-registration-poster img { height: auto; width: 100%; }
   .activity-registration-cta { display: flex; margin: -17px auto 46px; width: fit-content; }
+  .free-pass-experience { background: linear-gradient(180deg, rgba(255, 255, 255, .92), rgba(255, 244, 205, .86)); border: 2px solid rgba(215, 169, 40, .38); border-radius: 36px; box-shadow: var(--shadow-poster); margin: 0 auto 52px; max-width: 1120px; overflow: hidden; padding: clamp(28px, 5vw, 58px); position: relative; text-align: center; }
+  .free-pass-experience::before, .free-pass-experience::after { border: 2px solid rgba(215, 169, 40, .22); border-radius: 50%; content: ""; height: 210px; position: absolute; width: 210px; z-index: 0; }
+  .free-pass-experience::before { left: -125px; top: -110px; }
+  .free-pass-experience::after { bottom: -130px; right: -100px; }
+  .free-pass-experience > * { position: relative; z-index: 1; }
+  .free-pass-intro { margin-inline: auto; max-width: 880px; }
+  .free-pass-intro h3 { color: var(--green-900); font-family: var(--display); font-size: clamp(2rem, 4.6vw, 4.25rem); letter-spacing: -.05em; line-height: .98; text-wrap: balance; }
+  .free-pass-intro h3 span { color: var(--sun-deep); display: inline; }
+  .free-pass-intro p { color: var(--ink-soft); font-size: clamp(.95rem, 1.5vw, 1.2rem); margin: 18px auto 0; max-width: 720px; }
+  .free-pass-intro strong { color: var(--coral-deep); }
+  .free-pass-activities { display: grid; gap: 14px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 34px auto 42px; }
+  .free-pass-activity { align-items: center; background: rgba(255, 255, 255, .94); border: 1px solid rgba(215, 169, 40, .34); border-radius: 22px; box-shadow: var(--shadow-sm); display: grid; gap: 15px; grid-template-columns: 112px minmax(0, 1fr); min-height: 126px; overflow: hidden; padding: 10px; text-align: left; transition: transform .2s ease, box-shadow .2s ease; }
+  .free-pass-activity:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+  .free-pass-activity-image { align-self: stretch; background-position-y: 46%; background-repeat: no-repeat; background-size: 310% 205%; border-radius: 15px; min-height: 104px; }
+  .free-pass-activity-image.is-coloring { background-position-x: 0%; }
+  .free-pass-activity-image.is-prayer-mat { background-position-x: 50%; }
+  .free-pass-activity-image.is-kerabu { background-position-x: 100%; }
+  .free-pass-activity > div:last-child { align-items: flex-start; display: grid; grid-template-columns: auto 1fr; }
+  .free-pass-activity > div:last-child > span { font-size: 1.28rem; grid-row: 1 / 3; margin-right: 7px; }
+  .free-pass-activity h4 { color: var(--green-950); font-family: var(--display); font-size: .9rem; line-height: 1.13; }
+  .free-pass-activity p { color: var(--ink-soft); font-size: .75rem; font-weight: 750; margin-top: 3px; }
+  .gift-celebration { margin-inline: auto; max-width: 940px; min-height: 360px; position: relative; }
+  .gift-box { height: 245px; margin: 0 auto 22px; perspective: 850px; position: relative; width: 330px; }
+  .gift-base { background: linear-gradient(135deg, #f7bd23 0%, #ffe992 47%, #d98a00 100%); border: 2px solid rgba(148, 89, 0, .2); border-radius: 18px 18px 28px 28px; bottom: 0; box-shadow: 0 24px 34px rgba(169, 102, 0, .2); height: 158px; left: 20px; overflow: hidden; position: absolute; right: 20px; }
+  .gift-base::before, .gift-lid::before { background: linear-gradient(90deg, #e8423c, #ff7a67 48%, #d62f31); bottom: 0; content: ""; left: calc(50% - 32px); position: absolute; top: 0; width: 64px; }
+  .gift-base span { background: linear-gradient(90deg, transparent, rgba(255,255,255,.42), transparent); height: 200%; left: -15%; position: absolute; top: -60%; transform: rotate(23deg); width: 42%; }
+  .gift-lid { background: linear-gradient(135deg, #ffd459, #fff0a3 48%, #e69d00); border: 2px solid rgba(148, 89, 0, .19); border-radius: 19px; box-shadow: 0 10px 18px rgba(169, 102, 0, .2); height: 70px; left: 0; position: absolute; right: 0; top: 48px; transform-origin: 85% 100%; z-index: 4; }
+  .gift-ribbon-vertical { background: var(--coral); bottom: -35px; height: 62px; left: calc(50% - 25px); position: absolute; width: 50px; }
+  .gift-bow { background: linear-gradient(135deg, #ff7868, #e8423c); border: 2px solid rgba(139, 27, 25, .18); border-radius: 70% 28% 70% 28%; height: 76px; position: absolute; top: -62px; width: 92px; }
+  .gift-bow-left { left: calc(50% - 87px); transform: rotate(23deg); }
+  .gift-bow-right { border-radius: 28% 70% 28% 70%; right: calc(50% - 87px); transform: rotate(-23deg); }
+  .gift-coupon { align-items: center; background: linear-gradient(135deg, #fff1a8, #ffc928 55%, #e8a900); border: 4px double rgba(125, 74, 0, .32); border-radius: 14px; box-shadow: 0 0 0 5px rgba(255, 231, 121, .28), 0 16px 40px rgba(169, 102, 0, .3); display: flex; flex-direction: column; left: 37px; min-height: 138px; opacity: 0; padding: 14px 18px; position: absolute; right: 37px; top: 80px; transform: translateY(55px) scale(.78); z-index: 3; }
+  .gift-coupon span, .coupon-card span { color: #725000; font-size: .65rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+  .gift-coupon strong, .coupon-card strong { color: var(--green-950); font-family: var(--display); font-size: clamp(2.1rem, 5vw, 3.2rem); letter-spacing: .05em; line-height: 1.05; }
+  .gift-coupon small, .coupon-card small { color: #603700; font-size: .78rem; font-weight: 900; }
+  .free-pass-open { font-size: 1.12rem; min-width: min(100%, 470px); }
+  .free-pass-opening-message { color: var(--green-800); font-weight: 850; margin-top: 10px; }
+  .free-pass-reveal { margin-top: 18px; }
+  .free-pass-reveal > h4 { color: var(--green-900); font-family: var(--display); font-size: clamp(1.65rem, 3.5vw, 3rem); letter-spacing: -.035em; line-height: 1.05; text-wrap: balance; }
+  .coupon-card { align-items: center; background: linear-gradient(135deg, #fff7c7, #ffc928 56%, #e5a100); border: 4px double rgba(125, 74, 0, .34); border-radius: 20px; box-shadow: 0 0 32px rgba(255, 201, 40, .35), var(--shadow); display: flex; flex-direction: column; margin: 24px auto; max-width: 560px; padding: 24px; position: relative; }
+  .coupon-card::before, .coupon-card::after { background: var(--cream); border-radius: 50%; content: ""; height: 28px; position: absolute; top: calc(50% - 14px); width: 28px; }
+  .coupon-card::before { left: -15px; }
+  .coupon-card::after { right: -15px; }
+  .free-pass-actions { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; margin: 0 auto; max-width: 730px; }
+  .free-pass-copy { background: var(--white); border: 2px solid var(--green-700); color: var(--green-900); box-shadow: 0 7px 0 rgba(6, 77, 54, .16), var(--shadow-sm); }
+  .copy-feedback { color: var(--green-700); font-size: .82rem; font-weight: 850; min-height: 24px; padding-top: 9px; }
+  .coupon-guide { background: var(--white); border: 1px solid rgba(8, 116, 67, .14); border-radius: 24px; box-shadow: var(--shadow-sm); margin-top: 26px; padding: clamp(22px, 4vw, 38px); text-align: left; }
+  .coupon-guide > h4 { color: var(--green-900); font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2.4rem); text-align: center; }
+  .coupon-guide ol { display: grid; gap: 14px; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style: none; margin: 25px 0 0; padding: 0; }
+  .coupon-guide li { align-items: flex-start; display: flex; gap: 10px; }
+  .coupon-guide li > span { align-items: center; background: var(--sun); border-radius: 50%; color: var(--green-950); display: inline-flex; flex: 0 0 auto; font-family: var(--display); font-weight: 900; height: 34px; justify-content: center; width: 34px; }
+  .coupon-guide li p { color: var(--ink-soft); font-size: .78rem; line-height: 1.4; }
+  .coupon-guide li strong { color: var(--green-950); }
+  .coupon-warning { background: #fff0ee; border-left: 5px solid var(--coral); border-radius: 13px; color: #762d29; font-size: .84rem; margin-top: 28px; padding: 15px 17px; }
+  .floating-coupon-reminder { align-items: center; background: var(--green-900); border: 3px solid var(--sun); border-radius: 999px; bottom: 24px; box-shadow: var(--shadow); color: var(--white); display: flex; gap: 2px; padding: 5px 7px 5px 5px; position: fixed; right: 24px; z-index: 90; }
+  .floating-coupon-copy { align-items: center; background: transparent; border: 0; color: inherit; cursor: pointer; display: flex; font-size: 1.2rem; gap: 8px; padding: 5px 7px 5px 10px; text-align: left; }
+  .floating-coupon-copy span { display: flex; flex-direction: column; }
+  .floating-coupon-copy strong { font-size: .75rem; line-height: 1.1; }
+  .floating-coupon-copy small { color: #ffe27d; font-size: .65rem; font-weight: 800; }
+  .floating-coupon-close { align-items: center; background: rgba(255, 255, 255, .14); border: 0; border-radius: 50%; color: var(--white); cursor: pointer; display: flex; font-size: 1.05rem; height: 30px; justify-content: center; width: 30px; }
+  .confetti-burst { inset: -25px 8% 0; overflow: hidden; pointer-events: none; position: absolute; z-index: 8; }
+  .confetti-burst i { background: var(--confetti-color); border-radius: 2px; height: 12px; left: var(--confetti-x); opacity: 0; position: absolute; top: 38%; transform: translateY(0) rotate(0); width: 7px; }
+  .free-pass-experience.is-opening .gift-box { animation: gift-shake .42s ease-in-out 2; }
+  .free-pass-experience.is-opening .gift-lid, .free-pass-experience.is-revealed .gift-lid { transform: translate(55px, -62px) rotate(24deg); }
+  .free-pass-experience.is-opening .gift-coupon, .free-pass-experience.is-revealed .gift-coupon { opacity: 1; transform: translateY(-63px) scale(1); }
+  .free-pass-experience.is-opening .confetti-burst i { animation: coupon-confetti 1.45s cubic-bezier(.2,.72,.25,1) var(--confetti-delay) 1; }
+  .free-pass-experience.is-revealed .gift-box { height: 225px; }
+  .free-pass-experience.is-revealed .gift-coupon { box-shadow: 0 0 0 5px rgba(255, 231, 121, .28), 0 0 38px rgba(255, 201, 40, .48); }
+  .free-pass-experience.is-opening .gift-lid, .free-pass-experience.is-revealed .gift-lid, .gift-coupon { transition: transform .7s cubic-bezier(.2, 1.45, .35, 1), opacity .35s ease, box-shadow .3s ease; }
   .checkout-layout { align-items: start; display: grid; gap: 24px; grid-template-columns: 320px minmax(0, 1fr); }
   .checkout-layout-single { grid-template-columns: minmax(0, 1fr); margin-inline: auto; max-width: 980px; }
   .checkout-selector { background: var(--green-900); border: 5px solid var(--white); border-radius: 26px; box-shadow: var(--shadow-poster); padding: 20px; position: sticky; top: 18px; }
@@ -572,6 +641,22 @@
     .checkout-section { padding-top: 88px; }
     .activity-registration-poster { border-width: 4px; border-radius: 20px; margin-bottom: 28px; }
     .activity-registration-cta { margin: -8px auto 34px; width: 100%; }
+    .free-pass-experience { border-radius: 25px; margin-bottom: 38px; padding: 30px 16px; }
+    .free-pass-intro h3 { font-size: clamp(2rem, 9.6vw, 3rem); }
+    .free-pass-activities { grid-template-columns: 1fr; margin-block: 26px 34px; }
+    .free-pass-activity { grid-template-columns: 104px minmax(0, 1fr); min-height: 112px; }
+    .free-pass-activity-image { min-height: 92px; }
+    .gift-box { height: 220px; transform: scale(.82); transform-origin: center bottom; width: 330px; }
+    .gift-celebration { min-height: 330px; }
+    .free-pass-open { min-width: 100%; }
+    .free-pass-reveal { margin-top: 5px; }
+    .free-pass-actions { grid-template-columns: 1fr; }
+    .coupon-card { padding: 21px 18px; }
+    .coupon-card strong { font-size: 2.55rem; }
+    .coupon-guide { padding: 23px 17px; }
+    .coupon-guide ol { grid-template-columns: 1fr; }
+    .coupon-guide li p { font-size: .84rem; }
+    .floating-coupon-reminder { bottom: 86px; left: 12px; right: 12px; width: fit-content; }
     .checkout-selector { gap: 9px; grid-template-columns: 1fr; padding: 15px; }
     .selector-title, .registration-close-note, .checkout-note { grid-column: 1; }
     .checkout-panel { border-radius: 20px; }
@@ -606,6 +691,8 @@
 }
 
 @layer motion {
+  @keyframes gift-shake { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-3deg) translateX(-3px); } 75% { transform: rotate(3deg) translateX(3px); } }
+  @keyframes coupon-confetti { 0% { opacity: 0; transform: translateY(0) rotate(0); } 14% { opacity: 1; } 100% { opacity: 0; transform: translateY(190px) rotate(500deg); } }
   @keyframes flyby { 0% { transform: translateX(0) translateY(4px) rotate(-2deg); } 50% { transform: translateX(calc(50vw + 210px)) translateY(-9px) rotate(1deg); } 100% { transform: translateX(calc(100vw + 420px)) translateY(7px) rotate(-1deg); } }
   @keyframes cloud-drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(36px); } }
   @keyframes badge-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -11px; } }

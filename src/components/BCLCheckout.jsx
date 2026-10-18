@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { ASSETS, BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
 import { ArrowRight, Check, Community, Lock, Run, Shirt } from './Icons'
+import FreePassExperience from './FreePassExperience'
 
 const formCopy = {
   activities: {
@@ -113,6 +114,7 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
             Daftar / Sertai Sekarang <ArrowRight size={20} />
           </a>
         )}
+        {isActivities && <FreePassExperience />}
         <div className={showSelector ? 'checkout-layout' : 'checkout-layout checkout-layout-single'}>
           {showSelector && <aside className="checkout-selector" aria-label="Pilih aktiviti untuk pendaftaran">
             <p className="selector-title">Pilih aktiviti</p>
