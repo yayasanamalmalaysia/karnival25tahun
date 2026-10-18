@@ -80,7 +80,7 @@ function BCLForm({ selected }) {
 }
 
 const selectorItems = [
-  ['activities', 'Aktiviti Program Percuma — Percuma', Community],
+  ['activities', 'Aktiviti Program Percuma', Community],
   ['funrun', 'Amal Fun Run — serendah RM15', Run],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
   ['funrunShirt', 'Baju Fun Run Sahaja — Pre-order', Shirt],
