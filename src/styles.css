@@ -473,7 +473,7 @@
     .funrun-route-panel::before { right: 18px; top: 18px; }
     .funrun-route-panel > a { min-height: 410px; }
     .activity-rail { grid-template-columns: repeat(3, 1fr); }
-    .checkout-layout { grid-template-columns: 1fr; }
+    .checkout-layout:not(.checkout-layout-single) { grid-template-columns: 1fr; }
     .checkout-selector { display: grid; gap: 10px; grid-template-columns: repeat(2, 1fr); position: static; }
     .selector-title, .registration-close-note, .checkout-note { grid-column: 1 / -1; }
     .selector-item { margin: 0; }

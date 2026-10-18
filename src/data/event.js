@@ -41,6 +41,14 @@ export const ASSETS = {
 }
 
 export const REGISTRATIONS = {
+  activities: {
+    id: 'activities',
+    title: 'Aktiviti Program Percuma',
+    shortTitle: 'Aktiviti Percuma',
+    price: 'Percuma',
+    highlight: 'Pendaftaran aktiviti karnival tanpa yuran',
+    embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/event/aktivitikarnival',
+  },
   funrun: {
     id: 'funrun',
     title: 'Amal Fun Run 2026',

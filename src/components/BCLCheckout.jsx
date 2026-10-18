@@ -1,8 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
-import { Check, Lock, Run, Shirt } from './Icons'
+import { Check, Community, Lock, Run, Shirt } from './Icons'
 
 const formCopy = {
+  activities: {
+    title: 'Pendaftaran Aktiviti Program Percuma',
+    strong: 'Pilih aktiviti percuma yang ingin disertai',
+    detail: 'Daftar pertandingan mewarna kanak-kanak 7–12 tahun, gubahan sejadah atau menyediakan kerabu.',
+    Icon: Community,
+  },
   funrun: {
     title: 'Pendaftaran Amal Fun Run',
     strong: 'Pendaftaran serendah RM15 seorang',
@@ -20,16 +26,25 @@ const formCopy = {
 function BCLForm({ selected }) {
   const current = formCopy[selected]
   const ItemIcon = current.Icon
+  const formRef = useRef(null)
 
   useEffect(() => {
-    // Each route has one BCL container. Keep the script across React StrictMode
-    // effect re-runs so the provider's iframe is never cleared or duplicated.
-    if (document.querySelector('script[data-karnival-bcl]')) return
+    const form = formRef.current
+    if (!form) return undefined
+
+    form.replaceChildren()
+    const loading = document.createElement('p')
+    loading.className = 'bcl-loading'
+    loading.textContent = 'Memuatkan borang BCL…'
+    form.appendChild(loading)
+
     const script = document.createElement('script')
     script.src = BCL_SCRIPT_URL
     script.async = true
     script.dataset.karnivalBcl = selected
     document.body.appendChild(script)
+
+    return () => script.remove()
   }, [selected])
 
   return (
@@ -45,6 +60,7 @@ function BCLForm({ selected }) {
       </div>
       <div
         id="bcl-payment-form"
+        ref={formRef}
         data-url={REGISTRATIONS[selected].embedUrl}
         aria-label={`Borang BCL untuk ${current.title}`}
       >
@@ -56,6 +72,7 @@ function BCLForm({ selected }) {
 }
 
 const selectorItems = [
+  ['activities', 'Aktiviti Program Percuma — Percuma', Community],
   ['funrun', 'Amal Fun Run — serendah RM15', Run],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
 ]
@@ -64,14 +81,23 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
   const visibleItems = selectorItems.filter(([id]) => registrationIds.includes(id))
   const showSelector = visibleItems.length > 1
   const isFunRun = selected === 'funrun'
+  const isActivities = selected === 'activities'
+
+  const sectionKicker = isActivities ? 'Pendaftaran Percuma' : isFunRun ? 'Daftar Awal Sekarang' : 'Tempahan Rasmi'
+  const sectionTitle = isActivities ? 'Daftar Aktiviti Program Percuma' : isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : 'Lengkapkan Tempahan Baju Jubli Perak'
+  const sectionDetail = isActivities
+    ? 'Pilih pertandingan yang ingin disertai dan lengkapkan pendaftaran rasmi BCL di bawah.'
+    : isFunRun
+      ? 'Pilih pakej Amal Fun Run serendah RM15 tanpa meninggalkan halaman ini.'
+      : 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.'
 
   return (
     <section className="section checkout-section" id="checkout" aria-labelledby="checkout-title">
       <div className="shell">
         <div className="section-heading centered">
-          <span className="section-kicker">{isFunRun ? 'Daftar Awal Sekarang' : 'Tempahan Rasmi'}</span>
-          <h2 id="checkout-title">{isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : 'Lengkapkan Tempahan Baju Jubli Perak'}</h2>
-          <p>{isFunRun ? 'Lengkapkan pendaftaran Amal Fun Run tanpa meninggalkan halaman ini.' : 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.'}</p>
+          <span className="section-kicker">{sectionKicker}</span>
+          <h2 id="checkout-title">{sectionTitle}</h2>
+          <p>{sectionDetail}</p>
         </div>
         <div className={showSelector ? 'checkout-layout' : 'checkout-layout checkout-layout-single'}>
           {showSelector && <aside className="checkout-selector" aria-label="Pilih aktiviti untuk pendaftaran">
