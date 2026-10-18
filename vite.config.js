@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         jubilee: resolve(__dirname, 'baju-jubli-perak/index.html'),
+        funrunShirt: resolve(__dirname, 'pre-order-baju-fun-run/index.html'),
       },
     },
   },

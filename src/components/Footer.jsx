@@ -5,6 +5,7 @@ const footerLinks = [
   'Tentang Program',
   'Aktiviti',
   { label: 'Tempahan Baju Jubli Perak', href: './baju-jubli-perak/' },
+  { label: 'Pre-order Baju Fun Run Sahaja', href: './pre-order-baju-fun-run/' },
   { label: 'Pertanyaan Fun Run', href: 'https://wa.me/60176788930' },
   { label: 'Pertanyaan Vendor', href: 'https://wa.me/601135826720' },
   'Polisi Privasi',
@@ -26,7 +27,7 @@ export default function Footer() {
           {footerLinks.map((link) => typeof link === 'string'
             ? <span key={link}>{link}</span>
             : <a key={link.label} href={link.href}>{link.label}</a>)}
-          <small>Pautan tempahan Baju Jubli Perak disediakan secara berasingan.</small>
+          <small>Tempahan Baju Jubli Perak dan pre-order Baju Fun Run sahaja disediakan melalui halaman berasingan.</small>
         </nav>
       </div>
       <div className="footer-swoop" aria-hidden="true" />

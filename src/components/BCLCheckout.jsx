@@ -22,6 +22,12 @@ const formCopy = {
     detail: 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.',
     Icon: Shirt,
   },
+  funrunShirt: {
+    title: 'Pre-order Baju Fun Run Sahaja',
+    strong: 'Tempahan baju sahaja • Tanpa pendaftaran larian',
+    detail: 'Pilih rekaan, jenis dan saiz baju dalam borang rasmi BCL di bawah.',
+    Icon: Shirt,
+  },
 }
 
 function BCLForm({ selected }) {
@@ -68,6 +74,7 @@ function BCLForm({ selected }) {
         <p className="bcl-loading">Memuatkan borang BCL…</p>
       </div>
       {selected === 'funrun' && <p className="bcl-fallback">Borang tidak dipaparkan? <a href="https://yayasanamalmalaysia.bcl.my/event/amalfunrun" target="_blank" rel="noopener noreferrer">Buka borang Amal Fun Run terus di BCL</a>.</p>}
+      {selected === 'funrunShirt' && <p className="bcl-fallback">Borang tidak dipaparkan? <a href="https://yayasanamalmalaysia.bcl.my/embed/form/pre-bajufunrun" target="_blank" rel="noopener noreferrer">Buka borang pre-order Baju Fun Run terus di BCL</a>.</p>}
     </div>
   )
 }
@@ -76,6 +83,7 @@ const selectorItems = [
   ['activities', 'Aktiviti Program Percuma — Percuma', Community],
   ['funrun', 'Amal Fun Run — serendah RM15', Run],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
+  ['funrunShirt', 'Baju Fun Run Sahaja — Pre-order', Shirt],
 ]
 
 export default function BCLCheckout({ selected, onSelect, registrationIds = ['funrun', 'shirt'] }) {
@@ -83,13 +91,16 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
   const showSelector = visibleItems.length > 1
   const isFunRun = selected === 'funrun'
   const isActivities = selected === 'activities'
+  const isFunRunShirt = selected === 'funrunShirt'
 
-  const sectionKicker = isActivities ? 'Pendaftaran Percuma' : isFunRun ? 'Daftar Awal Sekarang' : 'Tempahan Rasmi'
-  const sectionTitle = isActivities ? 'Daftar Aktiviti Program Percuma' : isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : 'Lengkapkan Tempahan Baju Jubli Perak'
+  const sectionKicker = isActivities ? 'Pendaftaran Percuma' : isFunRun ? 'Daftar Awal Sekarang' : isFunRunShirt ? 'Tempahan Baju Sahaja' : 'Tempahan Rasmi'
+  const sectionTitle = isActivities ? 'Daftar Aktiviti Program Percuma' : isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : isFunRunShirt ? 'Pre-order Baju Fun Run Sahaja' : 'Lengkapkan Tempahan Baju Jubli Perak'
   const sectionDetail = isActivities
     ? 'Pilih pertandingan yang ingin disertai dan lengkapkan pendaftaran rasmi BCL di bawah.'
     : isFunRun
       ? 'Pilih pakej Amal Fun Run serendah RM15 tanpa meninggalkan halaman ini.'
+      : isFunRunShirt
+        ? 'Tempah baju rasmi Fun Run tanpa mendaftar pakej larian.'
       : 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.'
 
   return (

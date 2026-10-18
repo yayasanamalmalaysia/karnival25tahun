@@ -1,6 +1,9 @@
 const asset = (name) => {
-  const isJubileeStore = window.location.pathname.includes('/baju-jubli-perak/')
-  return `${isJubileeStore ? '../' : './'}assets/${name}`
+  const isStandalonePage = [
+    '/baju-jubli-perak/',
+    '/pre-order-baju-fun-run/',
+  ].some((path) => window.location.pathname.includes(path))
+  return `${isStandalonePage ? '../' : './'}assets/${name}`
 }
 
 export const BCL_SCRIPT_URL = 'https://bcl.my/js/bc-encrypted-payment-embed.js'
@@ -65,6 +68,14 @@ export const REGISTRATIONS = {
     price: null,
     highlight: 'Keluaran khas • Tempahan berasingan',
     embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/bajujubliperak',
+  },
+  funrunShirt: {
+    id: 'funrunShirt',
+    title: 'Pre-order Baju Fun Run Sahaja',
+    shortTitle: 'Baju Fun Run Sahaja',
+    price: null,
+    highlight: 'Tempahan baju sahaja • Tanpa pendaftaran larian',
+    embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/form/pre-bajufunrun',
   },
 }
 
