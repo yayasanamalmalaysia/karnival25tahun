@@ -13,7 +13,7 @@ export const EVENT = {
   shortTitle: 'Karnival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
-  registrationCloseLabel: '20 Oktober 2026',
+  registrationCloseLabel: '25 Oktober 2026',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
   mapUrl: 'https://maps.app.goo.gl/T72UUvqh65MFJPvp8',
