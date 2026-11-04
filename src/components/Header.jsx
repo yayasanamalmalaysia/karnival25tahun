@@ -5,6 +5,7 @@ import { ArrowRight, Close, Menu } from './Icons'
 const items = [
   { label: 'Utama', target: '#utama' },
   { label: 'Aktiviti', target: '#aktiviti' },
+  { label: 'Tentatif', target: '#tentatif' },
   { label: 'Fun Run', target: 'funrun' },
   { label: 'Baju Jubli Perak', href: './baju-jubli-perak/' },
   { label: 'Lokasi', target: '#lokasi' },
@@ -50,8 +51,8 @@ export default function Header({ onRegister }) {
           ))}
         </nav>
 
-        <button className="button button-gold header-cta" type="button" onClick={() => onRegister('selector')}>
-          Daftar Sekarang <ArrowRight size={19} />
+        <button className="button button-gold header-cta" type="button" onClick={() => onRegister('funrun')}>
+          Daftar Fun Run <ArrowRight size={19} />
         </button>
       </div>
     </header>

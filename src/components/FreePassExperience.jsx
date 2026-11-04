@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { ASSETS } from '../data/event'
 
 const ACTIVITIES = [
-  { emoji: '🎨', title: 'Pertandingan Mewarna', detail: '7–12 Tahun', crop: 'is-coloring' },
+  { emoji: '🎨', title: 'Pertandingan Mewarna', detail: '2 kategori: 7–9 tahun & 4–6 tahun', crop: 'is-coloring' },
   { emoji: '🌸', title: 'Pertandingan Gubahan Sejadah', detail: '', crop: 'is-prayer-mat' },
   { emoji: '🥗', title: 'Pertandingan Menyediakan Masakan Kerabu', detail: '', crop: 'is-kerabu' },
 ]
@@ -111,7 +111,7 @@ export default function FreePassExperience() {
     >
       <div className="free-pass-intro">
         <h3 id="free-pass-title">🎉 3 PERTANDINGAN MENARIK, <span>SEMUANYA PERCUMA!</span></h3>
-        <p>Nak masuk pertandingan tanpa bayar satu sen? Kami ada <strong>PAS PERCUMA</strong> khas untuk anda!</p>
+        <p>Pertandingan mewarna mempunyai <strong>2 kategori: 7–9 tahun dan 4–6 tahun</strong>. Semua penyertaan menggunakan kod kupon <strong>PERCUMA</strong>.</p>
       </div>
 
       <div className="free-pass-activities" aria-label="Tiga pertandingan percuma">
@@ -199,10 +199,10 @@ export default function FreePassExperience() {
         ) : null}
       </div>
 
-      {isRevealed && isVisible && !isReminderDismissed ? (
+      {isVisible && !isReminderDismissed ? (
         <div className="floating-coupon-reminder" role="status">
           <button className="floating-coupon-copy" type="button" onClick={handleCopy}>
-            🎟️ <span><strong>Kod PERCUMA</strong><small>{copyStatus === 'copied' ? 'Kod disalin!' : 'Salin Kod'}</small></span>
+            🎟️ <span><strong>GUNA KOD: PERCUMA</strong><small>{copyStatus === 'copied' ? 'Kod disalin!' : 'Tekan untuk salin • Bayar RM0'}</small></span>
           </button>
           <button
             className="floating-coupon-close"

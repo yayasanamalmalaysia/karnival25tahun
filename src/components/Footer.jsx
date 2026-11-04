@@ -4,6 +4,8 @@ import { Calendar, MapPin } from './Icons'
 const footerLinks = [
   'Tentang Program',
   'Aktiviti',
+  { label: 'Tentatif Program', href: '#tentatif' },
+  { label: 'Daftar Kehadiran RSVP', href: EVENT.rsvpUrl },
   { label: 'Tempahan Baju Jubli Perak', href: './baju-jubli-perak/' },
   { label: 'Pre-order Baju Fun Run Sahaja', href: './pre-order-baju-fun-run/' },
   { label: 'Pertanyaan Fun Run', href: 'https://wa.me/60176788930' },

@@ -1,51 +1,62 @@
 import { ASSETS, EVENT } from '../data/event'
 import { ArrowRight, Calendar, MapPin } from './Icons'
-import { Bunting, ConfettiField, FestivalPlane, FloatingBadges } from './FestiveDecor'
 
-export default function Hero({ onRegister }) {
+const featuredGuests = [
+  'Datuk Dr. Zulkifli Mohamad Al-Bakri',
+  'Muhammad Nadir Al-Nuri',
+  'Zainal Rashid Ahmad (ZRA)',
+  'Syed Azwan Syed Ali',
+]
+
+export default function Hero() {
+  const showProgramme = () => {
+    document.querySelector('#tentatif')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+
   return (
     <section className="hero" id="utama">
-      <div className="hero-sky" aria-hidden="true">
-        <span className="cloud cloud-one" />
-        <span className="cloud cloud-two" />
-        <FestivalPlane />
+      <picture className="hero-feature-backdrop" aria-hidden="true">
+        <source media="(max-width: 860px)" srcSet={ASSETS.heroFeaturedMobile} />
+        <img src={ASSETS.heroFeaturedDesktop} alt="" />
+      </picture>
+      <div className="hero-feature-shade" aria-hidden="true" />
+      <div className="hero-celebration" aria-hidden="true">
+        {Array.from({ length: 12 }, (_, index) => <i key={index} style={{ '--piece': index }} />)}
       </div>
-      <Bunting className="hero-bunting" />
-      <ConfettiField className="hero-confetti" />
+      <div className="hero-feature-figures" aria-hidden="true">
+        <img className="is-zulkifli" src={ASSETS.dhuhaSpeaker} alt="" />
+        <img className="is-nadir" src={ASSETS.nadirGuest} alt="" />
+        <img className="is-zra" src={ASSETS.zraGuest} alt="" />
+        <img className="is-syed" src={ASSETS.syedAzwanSpeaker} alt="" />
+      </div>
 
-      <div className="shell hero-stage">
-        <div className="hero-copy">
-          <div className="hero-copy-inner">
-            <div className="hero-eyebrow"><span aria-hidden="true">★</span> Sambutan Rasmi @25 Tahun</div>
-            <h1><span className="hero-karnival">Karnival</span> Labohan Dagang <em>@25 tahun</em> <small>Yayasan Amal Malaysia</small></h1>
-            <div className="hero-facts" aria-label="Maklumat utama program">
-              <p><Calendar /> <strong>{EVENT.dateLabel}</strong></p>
-              <p><MapPin /> <strong>{EVENT.locationShort}</strong></p>
-            </div>
-            <p className="hero-supporting">Jom raikan 25 tahun legasi, kebersamaan dan kemeriahan bersama pelbagai aktiviti menarik untuk semua.</p>
-            <p className="hero-package"><strong>Amal Fun Run:</strong> Pendaftaran serendah RM15 • Pakej dengan baju turut tersedia</p>
-            <div className="hero-actions">
-              <button className="button button-primary" type="button" onClick={() => onRegister('selector')}>
-                Daftar Aktiviti Sekarang <ArrowRight size={20} />
-              </button>
-              <a className="button button-ghost" href="#aktiviti">
-                Lihat Aktiviti Karnival <ArrowRight size={20} />
-              </a>
-            </div>
+      <div className="shell hero-feature-stage">
+        <div className="hero-feature-copy">
+          <img className="hero-feature-logo" src={ASSETS.anniversaryLogo} alt="Logo rasmi 25 Tahun Yayasan Amal Malaysia" />
+          <p className="hero-feature-kicker">Karnival Labohan Dagang @25 Tahun</p>
+          <h1>Semua<br /><em>Dijemput Hadir!</em></h1>
+          <p className="hero-feature-lead">Ayuh hadir bersama keluarga dan sahabat. Saksikan sendiri kemeriahan karnival serta pengisian istimewa bersama figura hebat yang dekat di hati masyarakat.</p>
+
+          <div className="hero-feature-facts" aria-label="Maklumat utama program">
+            <p><Calendar /> <strong>{EVENT.dateLabel}</strong><span>7.30 pagi – 9.00 malam</span></p>
+            <p><MapPin /> <strong>Kompleks Yayasan Amal Malaysia</strong><span>Kg. Labohan Dagang</span></p>
+          </div>
+
+          <div className="hero-feature-actions">
+            <button className="button button-coral" type="button" onClick={showProgramme}>
+              Lihat Tentatif Program <ArrowRight size={20} />
+            </button>
+            <a className="button button-ghost" href={EVENT.rsvpUrl}>
+              Daftar Kehadiran <ArrowRight size={20} />
+            </a>
           </div>
         </div>
 
-        <div className="hero-visual">
-          <figure className="hero-media">
-            <img src={ASSETS.hero} alt="Visual konsep suasana komuniti, keluarga, pelari dan penunggang sempena karnival" />
-            <figcaption>Visual konsep suasana Karnival Labohan Dagang</figcaption>
-          </figure>
-          <FloatingBadges />
-          <img className="hero-kids" src={ASSETS.festivalKids} alt="" aria-hidden="true" />
-          <img className="hero-anniversary-logo" src={ASSETS.anniversaryLogo} alt="Logo rasmi 25 Tahun Yayasan Amal Malaysia" />
+        <div className="hero-feature-guests" aria-label="Figura yang akan memeriahkan karnival">
+          <p>Bersama figura yang memeriahkan karnival</p>
+          <ul>{featuredGuests.map((guest) => <li key={guest}>{guest}</li>)}</ul>
         </div>
       </div>
-      <div className="hero-wave" aria-hidden="true" />
     </section>
   )
 }

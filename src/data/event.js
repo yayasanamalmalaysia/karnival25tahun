@@ -13,10 +13,11 @@ export const EVENT = {
   shortTitle: 'Karnival Labohan Dagang',
   dateLabel: '14 November 2026',
   dateTime: '2026-11-14T00:00:00+08:00',
-  registrationCloseLabel: '25 Oktober 2026',
+  registrationCloseLabel: '13 November 2026, 11:59 malam',
   locationShort: 'HQ Yayasan Amal Malaysia • Kg. Labohan Dagang',
   location: 'HQ Yayasan Amal Malaysia, Kg. Labohan Dagang, Selangor',
   mapUrl: 'https://maps.app.goo.gl/T72UUvqh65MFJPvp8',
+  rsvpUrl: 'https://hadir.amalmalaysia.org.my/',
   tagline: '25 Tahun Membina Legasi, Memimpin Transformasi',
 }
 
@@ -24,6 +25,8 @@ export const ASSETS = {
   logo: asset('yam-logo-official.jpg'),
   anniversaryLogo: asset('yam-25-logo-official.png'),
   hero: asset('hero-community-syariah-final.png'),
+  heroFeaturedDesktop: asset('hero-karnival-inland-background-v1.png'),
+  heroFeaturedMobile: asset('hero-karnival-inland-mobile-background-v1.png'),
   funRunLong: asset('funrun-long-catalogue.jpeg'),
   funRunShort: asset('funrun-short-catalogue.jpeg'),
   funRunMuslimah: asset('funrun-muslimah-catalogue.jpeg'),
@@ -42,6 +45,10 @@ export const ASSETS = {
   jubileeKidsMuslimah: asset('jubilee-kids-muslimah-latest.png'),
   festivalKids: asset('festival-kids-running-syariah-final.png'),
   festivalLandscape: asset('festival-landscape-syariah-final.png'),
+  dhuhaSpeaker: asset('datuk-dr-zulkifli-mohamad-albakri-cutout.png'),
+  zraGuest: asset('zainal-rashid-ahmad-zra-cutout.png'),
+  syedAzwanSpeaker: asset('syed-azwan-syed-ali-cutout.png'),
+  nadirGuest: asset('muhammad-nadir-al-nuri-bin-kamaruzaman-cutout.png'),
 }
 
 export const REGISTRATIONS = {
@@ -57,8 +64,8 @@ export const REGISTRATIONS = {
     id: 'funrun',
     title: 'Amal Fun Run 2026',
     shortTitle: 'Fun Run',
-    price: 'RM15',
-    highlight: 'Pendaftaran larian serendah RM15',
+    price: 'RM5',
+    highlight: 'Pendaftaran larian serendah RM5',
     embedUrl: 'https://yayasanamalmalaysia.bcl.my/embed/event/amalfunrun',
   },
   shirt: {
@@ -93,9 +100,9 @@ export const CARNIVAL_ACTIVITIES = [
 
 export const FAQS = [
   {
-    question: 'Apakah pilihan pakej Amal Fun Run?',
+    question: 'Adakah pendaftaran Amal Fun Run masih dibuka?',
     answer:
-      'Pakej Larian Sahaja RM15 tidak termasuk baju. Pakej Larian + Baju Dewasa RM50 dan Larian + Baju Kanak-kanak RM45 termasuk baju rasmi. Semua pakej merangkumi penyertaan larian, nombor bib, medal finisher dan minuman ringan.',
+      'Ya. Pendaftaran dibuka semula sehingga 11:59 malam, 13 November 2026 untuk pakej RM5 dan RM15 sahaja. Pilih pakej RM5 untuk larian + bib nombor, atau RM15 untuk larian + medal + bib nombor. Kedua-duanya menggunakan baju bebas.',
   },
   {
     question: 'Di manakah saya boleh tempah Baju Jubli Perak?',

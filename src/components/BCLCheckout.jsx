@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { ASSETS, BCL_SCRIPT_URL, REGISTRATIONS } from '../data/event'
 import { ArrowRight, Check, Community, Lock, Run, Shirt } from './Icons'
 import FreePassExperience from './FreePassExperience'
@@ -7,13 +7,13 @@ const formCopy = {
   activities: {
     title: 'Pendaftaran Aktiviti Program Percuma',
     strong: 'Pilih aktiviti percuma yang ingin disertai',
-    detail: 'Daftar pertandingan mewarna kanak-kanak 7–12 tahun, gubahan sejadah atau menyediakan masakan kerabu.',
+    detail: 'Daftar pertandingan mewarna kategori 7–9 tahun atau 4–6 tahun, gubahan sejadah atau menyediakan masakan kerabu.',
     Icon: Community,
   },
   funrun: {
     title: 'Pendaftaran Amal Fun Run',
-    strong: 'Pendaftaran serendah RM15 seorang',
-    detail: 'Pilih pakej larian, kategori 3KM atau 5KM dan maklumat peserta dalam borang rasmi BCL.',
+    strong: 'Dua pilihan: RM5 atau RM15 seorang',
+    detail: 'Pilih pakej larian + bib nombor (RM5) atau larian + medal + bib nombor (RM15), kemudian pilih kategori 3KM atau 5KM.',
     Icon: Run,
   },
   shirt: {
@@ -28,6 +28,51 @@ const formCopy = {
     detail: 'Pilih rekaan, jenis dan saiz baju dalam borang rasmi BCL di bawah.',
     Icon: Shirt,
   },
+}
+
+function CouponSpotlight() {
+  const [copyStatus, setCopyStatus] = useState('idle')
+
+  const copyCode = async () => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText('PERCUMA')
+      } else {
+        const input = document.createElement('textarea')
+        input.value = 'PERCUMA'
+        input.setAttribute('readonly', '')
+        input.style.position = 'fixed'
+        input.style.opacity = '0'
+        document.body.appendChild(input)
+        input.select()
+        const copied = document.execCommand('copy')
+        input.remove()
+        if (!copied) throw new Error('Copy failed')
+      }
+      setCopyStatus('copied')
+      window.setTimeout(() => setCopyStatus('idle'), 2600)
+    } catch {
+      setCopyStatus('failed')
+    }
+  }
+
+  return (
+    <aside className="coupon-spotlight" aria-labelledby="coupon-spotlight-title">
+      <div className="coupon-spotlight-copy">
+        <span className="coupon-spotlight-kicker">⚠️ LANGKAH WAJIB UNTUK BAYAR RM0</span>
+        <h3 id="coupon-spotlight-title">Guna kod kupon <strong>PERCUMA</strong></h3>
+        <p>Pilih pertandingan dan isi maklumat. Di akhir borang, tekan <strong>“Have a coupon code? → Redeem”</strong>, masukkan kod <strong>PERCUMA</strong> dan pastikan jumlah akhir menjadi <strong>RM0</strong>.</p>
+      </div>
+      <div className="coupon-spotlight-code" aria-label="Kod kupon PERCUMA">
+        <small>KOD KUPON</small>
+        <strong>PERCUMA</strong>
+        <button type="button" onClick={copyCode}>
+          {copyStatus === 'copied' ? '✅ KOD DISALIN!' : '📋 SALIN KOD'}
+        </button>
+        {copyStatus === 'failed' ? <span>Salin “PERCUMA” secara manual.</span> : null}
+      </div>
+    </aside>
+  )
 }
 
 function BCLForm({ selected }) {
@@ -81,7 +126,7 @@ function BCLForm({ selected }) {
 
 const selectorItems = [
   ['activities', 'Aktiviti Program Percuma', Community],
-  ['funrun', 'Amal Fun Run — serendah RM15', Run],
+  ['funrun', 'Amal Fun Run — serendah RM5', Run],
   ['shirt', 'Baju Jubli Perak — Tempahan berasingan', Shirt],
   ['funrunShirt', 'Baju Fun Run Sahaja — Pre-order', Shirt],
 ]
@@ -93,12 +138,12 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
   const isActivities = selected === 'activities'
   const isFunRunShirt = selected === 'funrunShirt'
 
-  const sectionKicker = isActivities ? 'Pendaftaran Percuma' : isFunRun ? 'Daftar Awal Sekarang' : isFunRunShirt ? 'Tempahan Baju Sahaja' : 'Tempahan Rasmi'
+  const sectionKicker = isActivities ? 'Pendaftaran Percuma' : isFunRun ? 'Pendaftaran Dibuka Semula' : isFunRunShirt ? 'Tempahan Baju Sahaja' : 'Tempahan Rasmi'
   const sectionTitle = isActivities ? 'Daftar Aktiviti Program Percuma' : isFunRun ? 'Lengkapkan Pendaftaran Fun Run' : isFunRunShirt ? 'Pre-order Baju Fun Run Sahaja' : 'Lengkapkan Tempahan Baju Jubli Perak'
   const sectionDetail = isActivities
     ? 'Pilih pertandingan yang ingin disertai dan lengkapkan pendaftaran rasmi BCL di bawah.'
     : isFunRun
-      ? 'Pilih pakej Amal Fun Run serendah RM15 tanpa meninggalkan halaman ini.'
+      ? 'Pilih pakej Amal Fun Run RM5 atau RM15 tanpa meninggalkan halaman ini. Pendaftaran pakej RM5 dan RM15 sahaja ditutup 11:59 malam, 13 November 2026.'
       : isFunRunShirt
         ? 'Tempah baju rasmi Fun Run tanpa mendaftar pakej larian.'
       : 'Pilih jenis dan saiz baju dalam borang untuk melengkapkan tempahan.'
@@ -111,13 +156,26 @@ export default function BCLCheckout({ selected, onSelect, registrationIds = ['fu
           <h2 id="checkout-title">{sectionTitle}</h2>
           <p>{sectionDetail}</p>
         </div>
+        {isActivities && <CouponSpotlight />}
         {isActivities && (
           <figure className="activity-registration-poster">
-            <img
-              src={ASSETS.activityRegistrationPoster}
-              alt="Poster Aktiviti Program Percuma: pertandingan mewarna 7 hingga 12 tahun, pertandingan gubahan sejadah dan pertandingan menyediakan masakan kerabu pada 14 November 2026 di Kampung Labohan Dagang"
-              loading="lazy"
-            />
+            <div className="activity-poster-visual">
+              <img
+                src={ASSETS.activityRegistrationPoster}
+                alt="Poster Aktiviti Program Percuma: pertandingan mewarna kategori 7 hingga 9 tahun dan 4 hingga 6 tahun, pertandingan gubahan sejadah dan pertandingan menyediakan masakan kerabu pada 14 November 2026 di Kampung Labohan Dagang"
+                loading="lazy"
+              />
+              <div className="poster-category-correction" aria-label="Pertandingan mewarna: kategori 7 hingga 9 tahun dan 4 hingga 6 tahun">
+                <span>PERTANDINGAN MEWARNA</span>
+                <strong>7–9 &amp; 4–6 TAHUN</strong>
+              </div>
+            </div>
+            <figcaption>
+              <span>🎨 KEMAS KINI KATEGORI MEWARNA</span>
+              <strong>7–9 TAHUN</strong>
+              <b>&amp;</b>
+              <strong>4–6 TAHUN</strong>
+            </figcaption>
           </figure>
         )}
         {isActivities && (

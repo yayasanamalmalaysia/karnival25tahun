@@ -79,6 +79,21 @@ export const Exhibition = (props) => (
 export const Food = (props) => (
   <Icon {...props}><path d="M5 4v7M8 4v7M5 8h3M6.5 11v9M16 4v16M16 4c3 2 3 7 0 9" {...stroke} /></Icon>
 )
+export const BookOpen = (props) => (
+  <Icon {...props}><path d="M4 5.5c3-.7 5.7-.1 8 1.8v12c-2.3-1.9-5-2.5-8-1.8v-12ZM20 5.5c-3-.7-5.7-.1-8 1.8v12c2.3-1.9 5-2.5 8-1.8v-12Z" {...stroke} /></Icon>
+)
+export const Music = (props) => (
+  <Icon {...props}><path d="M9 18V6l10-2v12M9 9l10-2" {...stroke} /><circle cx="6" cy="18" r="3" {...stroke} /><circle cx="16" cy="16" r="3" {...stroke} /></Icon>
+)
+export const HeartPulse = (props) => (
+  <Icon {...props}><path d="M3 12h4l2-4 3 8 2-4h7" {...stroke} /><path d="M20 7c-1.8-3-6-2.8-8 .2C10 4.2 5.8 4 4 7" {...stroke} /></Icon>
+)
+export const Target = (props) => (
+  <Icon {...props}><circle cx="12" cy="12" r="8" {...stroke} /><circle cx="12" cy="12" r="3" {...stroke} /><path d="m15 9 5-5M16 4h4v4" {...stroke} /></Icon>
+)
+export const Ticket = (props) => (
+  <Icon {...props}><path d="M3 8a2 2 0 0 0 0 4v4h18v-4a2 2 0 0 0 0-4V4H3v4Z" {...stroke} /><path d="M13 7h4M13 11h4M8 7v6" {...stroke} /></Icon>
+)
 export const AntiqueCar = (props) => (
   <Icon {...props}><path d="m5 16 1.5-5h11L19 16M4 16h16v3H4zM7 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM8 11l2-4h4l2 4" {...stroke} /></Icon>
 )

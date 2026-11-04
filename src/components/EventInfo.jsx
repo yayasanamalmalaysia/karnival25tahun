@@ -1,8 +1,6 @@
 import { EVENT } from '../data/event'
 import { Calendar, Info, MapPin, Stage } from './Icons'
 
-const pending = ['Tentatif', 'Waktu mula']
-
 export default function EventInfo() {
   return (
     <section className="section event-info-section" id="lokasi">
@@ -17,10 +15,8 @@ export default function EventInfo() {
           <span><Info size={18} /> Google Maps</span>
           <a href={EVENT.mapUrl} target="_blank" rel="noreferrer">Buka peta <span aria-hidden="true">↗</span></a>
         </div>
-        <div className="pending-info" aria-label="Maklumat yang akan dikemas kini">
-          {pending.map((item) => (
-            <div key={item}><span><Info size={18} /> {item}</span><strong>Akan dikemas kini</strong></div>
-          ))}
+        <div className="pending-info" aria-label="Pautan maklumat dan pertanyaan">
+          <div><a className="event-whatsapp" href="#tentatif"><Info size={18} /> Lihat Tentatif Program</a></div>
           <div><a className="event-whatsapp" href="https://wa.me/60176788930" target="_blank" rel="noreferrer">Pertanyaan Fun Run <span aria-hidden="true">↗</span></a></div>
           <div><a className="event-whatsapp" href="https://wa.me/601135826720" target="_blank" rel="noreferrer">Pertanyaan Vendor <span aria-hidden="true">↗</span></a></div>
         </div>

@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { ASSETS, EVENT } from '../data/event'
 import { ArrowRight, Calendar, Check, Run, Shirt } from './Icons'
 
-const Bullet = ({ children }) => <li><Check size={18} /> <span>{children}</span></li>
-
 function ProductImage({ src, alt, onOpen }) {
   return (
     <button className="product-image-button" type="button" onClick={() => onOpen({ src, alt })} aria-label={`Besarkan gambar: ${alt}`}>
@@ -72,71 +70,59 @@ function ProductDetails({ details }) {
   )
 }
 
-const FUN_RUN_PACKAGES = [
-  {
-    name: 'Larian Sahaja', price: 'RM15', label: 'PALING JIMAT', className: 'run-only',
-    features: ['Penyertaan larian 3KM atau 5KM', 'Nombor bib', 'Medal finisher', 'Minuman ringan'],
-    note: 'Tidak termasuk baju',
-  },
-  {
-    name: 'Larian + Baju Dewasa', price: 'RM50', label: 'PAKEJ LENGKAP', className: 'adult-shirt',
-    features: ['Penyertaan larian 3KM atau 5KM', 'Baju rasmi Amal Fun Run', 'Pilihan Muslimin lengan pendek / panjang dan Muslimah', 'Saiz dewasa XS hingga 6XL', 'Nombor bib, medal finisher dan minuman ringan'],
-  },
-  {
-    name: 'Larian + Baju Kanak-kanak', price: 'RM45', label: 'KIDS FUN RUN', className: 'kids-shirt',
-    features: ['Penyertaan larian 3KM atau 5KM', 'Baju rasmi kanak-kanak', 'Pilihan lelaki dan perempuan', 'Saiz 24, 26, 28, 30, 32 dan 34', 'Nombor bib, medal finisher dan minuman ringan'],
-  },
-]
-
-const FUN_RUN_DETAILS = [
-  ['Yuran pendaftaran', 'RM15 / RM50 / RM45 mengikut pakej'],
-  ['Termasuk', 'Larian, nombor bib, medal & minuman ringan'],
-  ['Material baju', 'Sublimation Diamond'],
-  ['Ketebalan baju', '180gsm'],
-  ['Saiz baju', 'Dalam borang pendaftaran bagi pakej berbaju'],
-]
-
-function FunRunOffers({ onSelect, onOpenImage }) {
+function FunRunOffers({ onOpenImage, onSelect }) {
   return (
     <div id="fun-run">
       <div className="funrun-offer">
         <div className="funrun-offer-copy">
           <h2>AMAL FUN RUN 2026</h2>
-          <p className="funrun-offer-pretitle">PENDAFTARAN SERENDAH</p>
-          <p className="funrun-offer-price">RM15 SAHAJA!</p>
-          <p className="funrun-offer-description">Jom sertai Amal Fun Run 2026 bersama keluarga dan rakan-rakan! Pilih larian santai 3KM atau 5KM dan nikmati kemeriahan Karnival 25 Tahun Yayasan Amal Malaysia.</p>
+          <p className="funrun-offer-pretitle">PENDAFTARAN DIBUKA SEMULA</p>
+          <p className="funrun-offer-price">SERENDAH RM5!</p>
+          <p className="funrun-offer-description">Pilih pakej larian sahaja mengikut keperluan anda. Baju adalah bebas dan pendaftaran pakej RM5 serta RM15 sahaja dibuka sehingga 11:59 malam, 13 November 2026.</p>
           <div className="funrun-offer-actions">
-            <button className="button button-coral" type="button" onClick={() => onSelect('funrun')}>DAFTAR SEKARANG SERENDAH RM15 <ArrowRight size={20} /></button>
-            <a className="button funrun-gallery-link" href="#pilihan-baju">LIHAT PILIHAN BAJU <ArrowRight size={20} /></a>
+            <button className="button button-coral" type="button" onClick={() => onSelect('funrun')}>DAFTAR FUN RUN SEKARANG <ArrowRight size={20} /></button>
+            <a className="button funrun-gallery-link" href="#pilihan-baju">LIHAT MAKLUMAT BAJU <ArrowRight size={20} /></a>
           </div>
         </div>
         <div className="funrun-offer-facts" aria-label="Maklumat larian">
-          <div><Calendar size={20} /><span>Tarikh Tutup Pendaftaran</span><strong>{EVENT.registrationCloseLabel}</strong></div>
+          <div><Calendar size={20} /><span>Tarikh Tutup Pendaftaran</span><strong>11:59 malam, 13 November 2026</strong></div>
           <div><Calendar size={20} /><span>Tarikh Larian</span><strong>{EVENT.dateLabel}</strong></div>
           <div><Run size={20} /><span>Lokasi</span><strong>Kompleks Yayasan Amal Malaysia, Kg Labohan Dagang, Banting, Selangor</strong></div>
         </div>
       </div>
 
-      <div className="funrun-packages" aria-label="Pilihan pakej Amal Fun Run 2026">
-        {FUN_RUN_PACKAGES.map((item) => (
-          <article className={`funrun-package ${item.className}`} key={item.name}>
-            <span className="funrun-package-label">{item.label}</span>
-            <h3>{item.name}</h3>
-            <p className="funrun-package-price"><strong>{item.price}</strong><span>/ peserta</span></p>
-            <ul className="feature-list" aria-label={`Kandungan pakej ${item.name}`}>
-              {item.features.map((feature) => <Bullet key={feature}>{feature}</Bullet>)}
-            </ul>
-            {item.note && <p className="funrun-package-note">{item.note}</p>}
-            <button type="button" onClick={() => onSelect('funrun')}>Pilih dalam borang BCL <ArrowRight size={18} /></button>
-          </article>
-        ))}
+      <div className="funrun-packages" aria-label="Pilihan pakej Amal Fun Run">
+        <article className="funrun-package">
+          <span className="funrun-package-label">PALING JIMAT</span>
+          <h3>Larian + Bib Nombor</h3>
+          <div className="funrun-package-price"><strong>RM5</strong><span>/ peserta</span></div>
+          <ul className="feature-list">
+            <li><Check size={18} /> Penyertaan larian 3KM atau 5KM</li>
+            <li><Check size={18} /> Baju bebas</li>
+            <li><Check size={18} /> Bib nombor</li>
+          </ul>
+          <p className="funrun-package-note">Tidak termasuk medal dan baju rasmi</p>
+          <button type="button" onClick={() => onSelect('funrun')}>Pilih dalam borang BCL <ArrowRight size={18} /></button>
+        </article>
+        <article className="funrun-package adult-shirt">
+          <span className="funrun-package-label">PAKEJ MEDAL</span>
+          <h3>Larian + Medal + Bib</h3>
+          <div className="funrun-package-price"><strong>RM15</strong><span>/ peserta</span></div>
+          <ul className="feature-list">
+            <li><Check size={18} /> Penyertaan larian 3KM atau 5KM</li>
+            <li><Check size={18} /> Baju bebas</li>
+            <li><Check size={18} /> Medal finisher</li>
+            <li><Check size={18} /> Bib nombor</li>
+          </ul>
+          <button type="button" onClick={() => onSelect('funrun')}>Pilih dalam borang BCL <ArrowRight size={18} /></button>
+        </article>
       </div>
-      <p className="funrun-package-clarifier">Pilihan pakej, kategori larian dan saiz baju dibuat dalam borang pendaftaran BCL di bawah.</p>
+      <p className="funrun-package-clarifier">Pilihan pakej dan kategori larian dibuat dalam borang pendaftaran BCL di bawah.</p>
 
       <section className="funrun-gallery" id="pilihan-baju" aria-labelledby="funrun-gallery-title">
         <div className="funrun-gallery-heading">
           <div><span className="section-kicker">Katalog Rasmi</span><h3 id="funrun-gallery-title">Pilihan Baju Amal Fun Run</h3></div>
-          <p>Baju disertakan dalam pakej dewasa dan kanak-kanak. Tekan gambar untuk paparan lebih besar.</p>
+          <p>Rekaan baju rasmi peserta Amal Fun Run. Tekan gambar untuk paparan lebih besar.</p>
         </div>
         <div className="registration-card promo-card funrun-card funrun-catalogue-card">
           <div className="product-stage">
@@ -159,8 +145,6 @@ function FunRunOffers({ onSelect, onOpenImage }) {
           <SizeChart src={ASSETS.sizeChartTshirtPolo} alt="Carta saiz terkini baju T-shirt dan polo untuk dewasa serta kanak-kanak" title="Carta Saiz T-shirt & Polo" variant="funrun" onOpen={onOpenImage} />
           <SizeChart src={ASSETS.sizeChartLongSleeve} alt="Carta saiz terkini baju lengan panjang untuk dewasa" title="Carta Saiz Lengan Panjang" variant="funrun" onOpen={onOpenImage} />
           <SizeChart src={ASSETS.sizeChartMuslimah} alt="Carta saiz terkini baju muslimah untuk dewasa dan kanak-kanak" title="Carta Saiz Muslimah Dewasa & Kanak-kanak" variant="funrun" onOpen={onOpenImage} />
-          <ProductDetails details={FUN_RUN_DETAILS} />
-          <button className="button button-coral card-button" type="button" onClick={() => onSelect('funrun')}>Pilih pakej pendaftaran <ArrowRight size={20} /></button>
         </div>
       </section>
     </div>
@@ -237,7 +221,7 @@ export default function RegistrationCards({ onSelect }) {
   return (
     <section className="section registration-section" id="pendaftaran">
       <div className="shell">
-        <FunRunOffers onSelect={onSelect} onOpenImage={setActiveImage} />
+        <FunRunOffers onOpenImage={setActiveImage} onSelect={onSelect} />
         <figure className="funrun-route-panel" id="laluan-fun-run">
           <a href={ASSETS.funRunRoute} target="_blank" rel="noreferrer" aria-label="Buka peta laluan Amal Fun Run dalam saiz penuh">
             <img

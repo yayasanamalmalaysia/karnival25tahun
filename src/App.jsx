@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Countdown from './components/Countdown'
+import ProgramSchedule from './components/ProgramSchedule'
 import RegistrationCards from './components/RegistrationCards'
 import BCLCheckout from './components/BCLCheckout'
 import CarnivalActivities from './components/CarnivalActivities'
@@ -13,15 +14,12 @@ import Footer from './components/Footer'
 import MobileStickyCTA from './components/MobileStickyCTA'
 
 export default function App() {
-  const [selectedRegistration, setSelectedRegistration] = useState('activities')
+  const [selectedRegistration, setSelectedRegistration] = useState('funrun')
 
-  const selectRegistration = (id = 'selector') => {
-    if (id === 'activities' || id === 'funrun') {
-      setSelectedRegistration(id)
-    }
-
+  const selectRegistration = (id = 'funrun') => {
+    if (id === 'funrun' || id === 'activities') setSelectedRegistration(id)
     window.requestAnimationFrame(() => {
-      document.querySelector(id === 'selector' ? '#pendaftaran' : '#checkout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      document.querySelector('#checkout')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     })
   }
 
@@ -32,11 +30,12 @@ export default function App() {
       <main id="main-content">
         <Hero onRegister={selectRegistration} />
         <Countdown />
+        <ProgramSchedule />
         <RegistrationCards onSelect={selectRegistration} />
         <BCLCheckout
           selected={selectedRegistration}
           onSelect={selectRegistration}
-          registrationIds={['activities', 'funrun']}
+          registrationIds={['funrun', 'activities']}
         />
         <CarnivalActivities />
         <AnniversaryStory />
