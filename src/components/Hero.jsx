@@ -1,5 +1,10 @@
 import { ASSETS, EVENT } from '../data/event'
 import { ArrowRight, Calendar, MapPin } from './Icons'
+import soutulOriginal from '../assets/soutul-amal-original-v3.png'
+import profOriginal from '../assets/prof-ai-v11.png'
+import latifahOriginal from '../assets/latifah-ai-v11.png'
+import marlinaOriginal from '../assets/marlina-original-v3.png'
+import newGuest from '../assets/figura-baharu-v4.png'
 
 const featuredGuests = [
   'Datuk Dr. Zulkifli Mohamad Al-Bakri',
@@ -24,10 +29,17 @@ export default function Hero() {
         {Array.from({ length: 12 }, (_, index) => <i key={index} style={{ '--piece': index }} />)}
       </div>
       <div className="hero-feature-figures" aria-hidden="true">
+        <div className="hero-rear-guests">
+          <img className="rear-soutul" src={soutulOriginal} alt="" />
+          <img className="middle-marlina" src={marlinaOriginal} alt="" />
+          <img className="middle-latifah" src={latifahOriginal} alt="" />
+          <img className="middle-prof" src={profOriginal} alt="" />
+        </div>
         <img className="is-zulkifli" src={ASSETS.dhuhaSpeaker} alt="" />
         <img className="is-nadir" src={ASSETS.nadirGuest} alt="" />
         <img className="is-zra" src={ASSETS.zraGuest} alt="" />
         <img className="is-syed" src={ASSETS.syedAzwanSpeaker} alt="" />
+        <img className="is-new-guest" src={newGuest} alt="" />
       </div>
 
       <div className="shell hero-feature-stage">
