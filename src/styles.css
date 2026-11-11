@@ -1111,6 +1111,14 @@
 }
 .hero-figure-composition { display: contents; }
 @media (max-width: 600px) {
+  .hero { padding-bottom: 16px; }
+  .hero-feature-guests {
+    border-radius: 0 0 17px 17px; margin: -1px auto 0;
+    padding: 12px 14px; width: calc(100% - 16px);
+  }
+  .hero-feature-guests ul { display: grid; gap: 5px; grid-template-columns: 1fr; }
+  .hero-feature-guests li { font-size: .68rem; line-height: 1.4; }
+  .countdown { margin-top: 0; }
   /* Scale the approved desktop montage as one composition on phones. */
   .hero-feature-figures {
     aspect-ratio: 930 / 570; display: block; height: auto; left: auto;
