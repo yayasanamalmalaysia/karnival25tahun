@@ -14,3 +14,4 @@ Arahan ringkas kepada ChatGPT/Codex di laptop:
 Pasang dengan pnpm install --frozen-lockfile. Jalankan pnpm dev untuk semakan dan pnpm build untuk menghasilkan dist. Semak desktop dan telefon sebelum push.
 
 Push main mencetuskan workflow GitHub Pages. Domain rasmi menggunakan cPanel dan perlu penerbitan build berasingan yang dibenarkan pengguna. Folder sasaran: /home/yayasan1/public_html/amalmalaysia.org.my/karnival25tahun. Sandarkan index semasa, kekalkan aset hash lama untuk rollback, kemudian semak URL rasmi selepas penerbitan. Jangan anggap push GitHub sebagai bukti laman rasmi sudah dikemas kini.
+Versi v12: mobile mengekalkan komposisi figura berlapis seperti desktop, diskalakan sebagai satu susunan tanpa kad potret berasingan. Aset gambar v11 yang sama dikekalkan. Susunan mobile berada dalam blok CSS max-width 600px dengan wrapper hero-figure-composition.

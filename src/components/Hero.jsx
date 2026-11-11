@@ -29,6 +29,7 @@ export default function Hero() {
         {Array.from({ length: 12 }, (_, index) => <i key={index} style={{ '--piece': index }} />)}
       </div>
       <div className="hero-feature-figures" aria-hidden="true">
+        <div className="hero-figure-composition">
         <div className="hero-rear-guests">
           <img className="rear-soutul" src={soutulOriginal} alt="" />
           <img className="middle-marlina" src={marlinaOriginal} alt="" />
@@ -40,6 +41,7 @@ export default function Hero() {
         <img className="is-zra" src={ASSETS.zraGuest} alt="" />
         <img className="is-syed" src={ASSETS.syedAzwanSpeaker} alt="" />
         <img className="is-new-guest" src={newGuest} alt="" />
+        </div>
       </div>
 
       <div className="shell hero-feature-stage">
